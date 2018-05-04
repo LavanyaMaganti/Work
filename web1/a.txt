@@ -1,0 +1,20 @@
+- Among others, the following attributes may be placed on any tag:
+ class	- The list of space seperated classes that the element belongs to.
+	  Mostly used to specify the CSS properties of an element, or for use
+	  with the getElementsByClassName() method.
+ style	- Sets the CSS (Cascading Style Sheets) styling attributes for the
+ <html>	-The root element in the document, contains all other HTML elements.
+ <head>	- Represents a collection of meta-data concerning the document.
+	  << Should be the first element in a <html> element. >>
+ <title>- Sets the documents title or name.
+	  << Must be in the head element and only one title element per
+ <style>- Embeds CSS style information in the document.
+ <body> - Represents the content of a document.
+ <h1> - <h6> - Represent headings for their sections.  Each has a "rank" as
+ <ol>	- Represents a list of ordered items.  Items are specified with the
+	  reversed - boolean indicating the list is in reverse order
+	  start - An integer specifying the value of the first item.
+	  type - specifies the type of marker to use: 1 (numbers), a/A
+	    <li> Note the li's don't need to be closed.
+	    <li> Although you can close them. </li>
+ <li>	- Represents a list item, a child of either a <ol> or <ul> ancestor.

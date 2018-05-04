@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<head>
+<title> Men watches </title>
+<meta charset='utf-8'>
+<style>
+
+body
+{
+background-color:url(intro3.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+}
+.login
+{
+ margin: 30px 20px 0px 10px;
+ padding:0px;
+ color: #00FFFF;
+text-decoration:none;
+}
+.login:hover 
+{
+ color: pink;
+}
+.sign
+{
+ margin: 30px 20px 0px 10px;
+ padding:0px;
+ color: #00FFFF;
+ text-decoration:none;
+}
+.sign:hover 
+{
+ color: pink;
+}
+.bag
+{
+ margin: 30px 20px 0px 10px;
+ padding:0px;
+ color: #00FFFF;
+ text-decoration:none;
+}
+.bag:hover 
+{
+ color: pink;
+}
+#search
+{
+ background-image: url('searchicon.png');
+ background-position: 10px 10px; 
+ background-repeat: no-repeat;
+ padding: 12px 20px 12px 40px;
+ width: 140px;
+ box-sizing: border-box;
+ border: 2px solid #ccc;
+ border-radius: 4px;
+ font-size: 16px;
+ background-color: white;
+ -webkit-transition: width 0.4s ease-in-out;
+ transition: width 0.4s ease-in-out;
+}
+
+#search:focus {
+  width:20%;
+}
+.watches {
+margin: 0px 20px 0px 0px;
+padding:0px;
+color: #00FFFF;
+text-decoration:none;
+}
+.watches:hover
+{
+color: pink;
+cursor:pointer;
+font-size:22pt;
+}
+
+.center {
+text-decoration:none;
+text-align:right;
+margin:auto;
+padding:0px;
+background-color:black;
+ }
+.drop {
+  position: relative;
+  display: inline-block;
+  float:center;
+ }
+.content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  margin:0px 0px 0px 10px;
+  min-width: 100px;
+  float:left;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ }
+.content a {
+ color: black;
+  padding:2px;
+  float:left;
+ text-decoration: none;
+ display: inline-block;
+ }
+.content a:hover {background-color: black;}
+
+.drop:hover .content {
+ display: block;
+ }
+.drop:hover .watches {
+font-size:30px;
+ }
+a:hover
+ {
+ color:white;
+ }
+
+.allpics {
+}
+.pic1{
+height:235px;
+width:150px;
+margin:120px 0px 20px 100px;
+padding:50px 80px 50px 70px;
+font-size:18pt;
+text-align:center;
+}
+.pic2{
+height:280px;
+width:250px;
+margin:120px 0px 20px 100px;
+padding:30px 30px 25px 20px;
+font-size:18pt;
+text-align:center;
+}
+.pic3{
+height:280px;
+width:230px;
+margin:120px 0px 20px 100px;
+padding:30px 30px 25px 30px;
+font-size:18pt;
+text-align:center;
+}
+.pic4{
+height:310px;
+width:230px;
+margin:80px 0px 20px 100px;
+padding:5px 30px 25px 40px;
+font-size:18pt;
+text-align:center;
+}
+.pic5{
+height:280px;
+width:230px;
+margin:80px 0px 20px 100px;
+padding:30px 30px 25px 40px;
+font-size:18pt;
+text-align:center;
+}
+.pic6{
+height:280px;
+width:230px;
+margin:80px 0px 20px 100px;
+padding:30px 30px 25px 40px;
+font-size:18pt;
+text-align:center;
+}
+.submit {
+font-size:12pt;
+background-color: lightgrey;
+}
+
+.submit:hover {
+background-color: #7FFFD4;
+}
+
+</style>
+</head>
+
+<body>
+<form name="myForm" method="post" >
+
+<?php
+  if(isset($_POST["submit"])){
+     echo "Hiiiii";
+  }
+?>
+<section class="center">
+<h2>
+<div class="drop">
+ <a class="watches">Watches</a>
+ <div class="content">
+ <a href="mw.html">Men</a>
+  <a href="ww.html">Women</a>
+</div>
+</div>
+<a href="login.php" class="login"> Login</a>
+<a href="signup.php" class="sign"> Sign up</a>
+<a href="mybag.html" class="bag"> My bag</a>
+<input type="text" name="search" id="search" placeholder="search.." align="right" width="50px" height="30px">
+</section>
+<table>
+<tbody>
+
+<div class="allpics">
+<tr>
+<td>
+<div class="pic1">
+  <img src="mw/mwat1.jpg">
+  Price: 150$
+<br> <br> <button type="submit" class="submit" id="submit">Add to cart </button>
+</div>
+<td>
+<div class="pic2">
+  <img src="mw/mwat2.jpg">
+  Price: 144$
+<br> <br> <button type="submit" class="submit">Add to cart </button>
+</div>
+<td>
+<div class="pic3">
+  <img src="mw/mwat3.jpg">
+   Price: 110$
+<br> <br> <button type="submit" class="submit">Add to cart </button>
+</div>
+</tr>
+<tr>
+<td>
+<div class="pic4">
+  <img src="mw/mwat4.jpg">
+  Price: 221$
+<br> <button type="submit" class="submit">Add to cart </button>
+</div>
+<td>
+<div class="pic5">
+  <img src="mw/mwat5.jpg">
+  Price: 195$
+<br> <br> <button type="submit" class="submit">Add to cart </button>
+</div>
+<td>
+<div class="pic6">
+  <img src="mw/mwat6.jpg">
+  Price: 100$
+<br> <br> <button type="submit" class="submit">Add to cart </button>
+</div>
+</div>
+</tr>
+
+<script>
+
+</script>
+</tbody>
+</table>
+</body>
+</html>

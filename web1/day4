@@ -1,0 +1,65 @@
+01-26-2017
+
+- New lab exercise.
+
+Global Attributes:
+=================
+- Among others, the following attributes may be placed on any tag:
+
+ class	- The list of space seperated classes that the element belongs to.
+	  Mostly used to specify the CSS properties of an element, or for use
+	  with the getElementsByClassName() method.
+
+ id	- Items unique identifier, should be unique amongst all IDs.  Must be at
+	  least one character, with no spaces.
+
+ style	- Sets the CSS (Cascading Style Sheets) styling attributes for the
+	  element.
+
+HTML elements:
+-------------
+ <html>	-The root element in the document, contains all other HTML elements.
+
+ <head>	- Represents a collection of meta-data concerning the document.
+	  << Should be the first element in a <html> element. >>
+
+ <title>- Sets the documents title or name.
+	  << Must be in the head element and only one title element per
+	  document.>>
+
+ <style>- Embeds CSS style information in the document.
+	ex: <style>
+	      /* C style comments, not HTML comments */
+	      body { color: black; background: white; }
+	    </style>
+
+ <body> - Represents the content of a document.
+
+ <h1> - <h6> - Represent headings for their sections.  Each has a "rank" as
+	  given by its number, 1 being highest, 6 lowest.
+
+ <p>	- Represents a paragraph.
+ <hr\>	- Creates a horizontal rule across it's containing element.
+ <pre>	- Represents a block of pre-formatted text.  Text is displayed as is,
+	  ignoring any HTML elements.  Useful for displaying source code.
+
+ <ol>	- Represents a list of ordered items.  Items are specified with the
+	  <li> element.
+	Attributes:
+	  reversed - boolean indicating the list is in reverse order
+	  start - An integer specifying the value of the first item.
+	  type - specifies the type of marker to use: 1 (numbers), a/A
+		 (letters), i/I (roman numerals).
+	ex:
+	  <ol type='I'>
+	    <li> Roman numeral list
+	    <li> Note the li's don't need to be closed.
+	    <li> Although you can close them. </li>
+	  </ol>
+
+ <ul>	- Represents an unordered (bulletted) list of items (order is not
+	  important).
+	  type - "disc", "square", "circle"
+
+ <li>	- Represents a list item, a child of either a <ol> or <ul> ancestor.
+	Attributes: value (if a child of a <ol> element).

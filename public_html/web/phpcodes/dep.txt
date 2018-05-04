@@ -1,0 +1,10 @@
+food services:food 
+maintenance:mnt 
+sales:sales 
+human resources:hr 
+training:training 
+billing:billing 
+quality control:qc 
+accounting:acct 
+production:prod 
+information technology:it

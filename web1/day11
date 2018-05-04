@@ -1,0 +1,67 @@
+02-21-2017:
+
+Variables and primitive data types:
+- Variables are names for data storage locations.
+- What is data?  In JavaScript these are the "primitive" (i.e. the most basic)
+  data types:
+  - Numbers: 5, -10, 10.5
+  - Boolean: true & false
+  - Strings: "Hello, world!", 'abc'
+    - composed of characters enclosed by single or double quotes.
+  - Arrays: [1, 2, "abc", true]
+    - a list of data items.  If a data item was a piece of paper, an array
+      is like a folder holding the papers.
+    - Each item in the array has an index location (like the papers location
+      in the folder or stack of papers). This index starts at 0 and increases
+      by one for each item.
+  - Objects:
+    - To talk about later, but they are a lot like arrays, but we can use
+      a name to refer to each data item rather than an index number.
+
+  - Data values like 10, "test", true, etc, are called "literals" or
+    "constants".
+
+- Variables are defined in JavaScript using the "var" keyword:
+  ex:
+    var a; // Defines a single variable named a, but doesn't anything with it.
+    var a, b;	// Defines variables a and b.
+    var thisIsAReallyLongVariableName;
+- Variable names can have letters, numbers and underscores, but must begin
+  with a letter or underscore.
+  ex: var ok, _ok2;
+      var 3not_ok;
+
+- Variables are assigned a value, using the '=' or assignment operator:
+  a = 10;
+- The = is not like in algebra.  The = operator stores the value on the right
+  side into the variable specified on the left side.
+
+- When variables are used on the right side of an assignment, we just use their
+  values, with some exceptions.
+
+- We can define a variable and assign it a value in one step:
+  var a = 10;
+
+- We can change it's value after we've defined it, repeatedly:
+  a = 2 + 10;	// Change a from 10 to (2+10) or 12
+  ...
+  a = "test";	// Now a holds the string "test"
+  
+- Variables in JavaScript are "loosely-typed".  They don't care what kind
+  of data they hold, they can hold anything, this is not true in other
+  programming languages, such as C or C++ which are "strongly-typed".
+
+- You will note the ; at the end of each variable assignment. Each assignment
+  is a "statement" and ; is the end-of-statement-marker and works much like
+  the period at the end of a sentence.  You don't always need ;'s in
+  JavaScript, but you should always use them anyway.  It's good grammar.
+
+
+- Stack trace for:		a | b
+  var a, b;			--+--
+  a = 5; b = 10;		 5|10
+  a = a + b;			15|10
+  b = a - b;			15| 5
+
+  - Do several, include strings and bools.
+

@@ -1,0 +1,114 @@
+// Writing and implementing the Hash Function and crating and storing them in a Hash table
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define TABLE_SIZE 25
+#define WORD_LEN   50
+long hash(char letter);
+
+typedef struct node
+{
+  char key;
+  int count;
+} NODE;
+
+NODE hash_table[TABLE_SIZE];
+int collisions=0;
+void print_table();
+int find(int hv, char letter);
+
+
+int main (int argc, char *argv[])
+{
+  FILE *fd;
+  if (argc < 2)
+    {
+      fprintf (stderr, "Expected Filename.\n");
+      exit (0);
+    }
+  fd = fopen (argv[1], "r");
+
+  if (fd == NULL)
+    {
+      fprintf (stderr, "File Does not Exist.\n");
+      exit (0);
+    }
+
+  while ((c = fgetc (fd)) != EOF)
+    {
+      hash_value = hash (buff);
+      if (hash_table[hash_value].count == 0)
+	{
+	  hash_table[hash_vaue].key = c;
+	  hash_table[hash_value].count++;
+	}
+      else
+	{
+	  hash_table[hash_value].count++;
+
+	}
+    }
+  print_table ();
+  return 0;
+}
+
+long
+hash (char letter)
+{
+  long x, i, result = 0;
+  long a = 1, inc = 2;
+  x = letter - 96;
+  result = (result + x * a);
+  a = a * inc;
+}
+
+result = result % TABLE_SIZE;
+return result;
+}
+
+
+
+int find (int hv, char letter)
+{
+  NODE *p, *q, *temp;
+  //Let the temporary pointer point to that block
+  p = &hash_table[hv];		//& is for address of that block.
+  //I am going to use a do.. while loop here.
+  do
+    {
+      if (letter==p>key)
+	{			//Compare the words
+	  p->count++;		//If found increment the count
+	  printf ("Word found and incremented\n");
+	  return 1;
+	}
+    }
+  while (p != NULL);
+
+  //Coming here means word not found. So return add the word & make the count zero.
+  //Create a block
+  printf ("Word Not found, so adding it.\n");
+  temp = (NODE *) malloc (sizeof (struct node));
+  temp->key=buff);	//Copy the word onto the new block.
+  temp->count = 1;
+  temp->next = NULL;
+  return 0;
+}
+
+void print_table(){
+  NODE *p;
+    int i;
+      for (i = 0 ; i < TABLE_SIZE; i++){
+          p = & hash_table[i];
+              printf("%4d : ",i);
+              
+                  while(p!=NULL){
+                    printf("%s   ",p->key);
+                          p = p->next;
+                              }
+                                  printf("\n");
+                                    }
+                                      printf("No of Collisions: %d\n",collisions);
+                                        return;
+                                        }

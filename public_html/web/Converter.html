@@ -1,0 +1,82 @@
+<!--DOCTYPE HTML -->
+
+<html>
+<h1>
+<marquee>Converter</marquee>
+</h1>
+
+<style>
+
+table {
+border:1px solid black;
+padding:25;
+color:#E74C3C;
+}
+
+h1 {
+font-family:"Patua One";
+font-size:250%;
+color:#E74C3C;
+}
+
+.bot-bor{
+border-bottom: 1px solid #000000;
+color:#000000;
+column-width:200px;
+}
+
+input {
+    line-height: 30px;
+}
+.font {
+font-size: 150%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+</style>
+
+<script>
+function Converter() {
+var Input = document.getElementById("input").value;
+var Decimal = parseInt(Input);
+var Hexa = parseInt(Input).toString(16);
+var Octa = parseInt(Input).toString(8);
+var Binary = parseInt(Input).toString(2);
+document.getElementById("dec").innerHTML = Decimal;
+document.getElementById("hex").innerHTML = Hexa;
+document.getElementById("oct").innerHTML = Octa;
+document.getElementById("bin").innerHTML = Binary;
+}
+</script>
+
+<body>
+<col width="20">
+<col width="15">
+<table align="center">
+<tr>
+<td colspan="2"><input type="number" min="0" style="width: 10em" id="input" class="font" onchange="Converter()" onkeypress="Converter()"/></td>
+</tr>
+<tr>
+<td>Dec:</td>
+<td class="bot-bor" id="dec"></td>
+</tr>
+
+<tr>
+<td>Hex:</td>
+<td class="bot-bor" id="hex"> </td>
+</tr>
+<tr>
+<td>Oct:</td>
+<td class="bot-bor" id="oct"></td>
+</tr>
+<tr>
+<td>Bin:</td>
+<td class="bot-bor" id="bin"></td>
+</tr>
+</table>
+</body>
+</html>

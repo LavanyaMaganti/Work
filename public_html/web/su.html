@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Signup form </title>
+<meta charset='utf-8'>
+<style>
+body
+{
+   background-image:url(intro5.jpg);
+   background-repeat:no-repeat;
+   background-size:cover;
+}
+h3
+{
+font-size:25pt;
+}
+.con
+{
+font-size:15pt;
+height:300px;
+width:1500px;
+}
+.box
+{
+height:25px;
+}
+.but
+{
+font-size:16pt;
+height:30px;
+margin:5px 100px 0px 450px;
+padding:5px 100px 35px 100px;
+float: center;
+}
+
+</style>
+</head>
+
+<body>
+<form name="myForm" method="POST" action="sup.php">
+<br><br><br><h3 align='center'> <b> Create an account </b> </h3>
+<table class="con">
+<tbody>
+  <tr> <td align='right'> Your Name: </td> <td align='left'> <input type="text" class="box" placeholder="Full name" name="name" id='name' size=50> 
+  </td>
+  <tr> <td align='right'> Email: </td> <td> <input type="text" name="email" id='email' class="box" placeholder="someone@host" size=50> 
+  </td>
+  <tr> <td align='right'> New Password: </td> <td> <input type="password" class="box" placeholder="minimum 8 characters" name="p1" id='p1' size=50> 
+  </td>
+  <tr> <td align='right'> Confirm password: </td> <td> <input type="password" class="box" name="p2" id='p2' size=50> </td>
+</tbody>
+</table>
+&nbsp;<button type="submit" name="submit" onclick="return passmatch();" class="but"> Create your account </button>
+</form>
+<script>
+
+function passmatch()
+{
+var p1=document.getElementById('p1').value;
+var p2=document.getElementById('p2').value;
+if(p1!=p2)
+alert("passwords not match");
+
+var p1=document.getElementById('p1').value;
+var n=8;
+if(p1<=n)
+alert("min 8 characters");
+
+var x = document.forms["myForm"]["email"].value;
+var at = x.indexOf("@");
+var dot = x.lastIndexOf(".");
+if (at<1 || dot<at+2 || dot+2>=x.length) {
+alert("Invalid email");
+return false;
+}
+/*
+var pwd = document.getElementById('pwd').value;
+if(pwd.length <= 8)
+{
+alert("Invalid password");
+}*/
+}
+</script>
+</body>
+</html>
+
+

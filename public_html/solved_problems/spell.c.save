@@ -1,0 +1,87 @@
+#include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h> 
+#include<ctype.h>
+
+#define W_COUNT 23800 
+#define MAX_LEN 50 
+#define STA_LEN 2096
+
+char *dict[W_COUNT];
+char buffer[MAX_LEN];
+int num_words;			//No of Words 
+char statement[STA_LEN]; 
+void read_dictionary(char *); 
+void read_input(); 
+void spell_check ();
+int word_search (char *);
+
+int main (int argc, char *argv[])
+{
+  int i;
+  if (argc < 2)
+    {
+      printf ("Expected dictionary Filename.\n");
+      exit (0);
+    }
+  read_dictionary (argv[1]);
+  read_input ();
+  spell_check ();
+}
+
+void read_dictionary (char *filename)
+{
+  FILE *fd;
+  int i = 0;
+  fd = fopen (filename, "r");
+  while (fscanf (fd, "%s", buffer) != EOF)
+    dict[i++] = strdup (buffer);
+  num_words = i;
+  fclose (fd);
+}
+
+void read_input ()
+{
+    char a;
+  int i = 0;
+  printf ("Enter Statement: ");
+  statement[0] = 0;
+  while ((a = getc (stdin)) != '\n')
+    statement[i++] = tolower(a);
+  statement[i] = 0;
+
+}
+
+void spell_check ()
+{
+
+    char *str;
+  str = strtok (statement, " .?,!-");
+  while (str != NULL)
+    {
+      if (!word_search (str))
+	printf ("%s Not found.\n", str);
+
+      str = strtok (0, " .?,!-");
+    }
+}
+
+int word_search (char *word)
+{
+  int high, low, mid;
+  high = num_words - 1;
+  low = 0;
+ int found = 0;
+  while (found == 0)
+    {
+      mid = (low + high) / 2;
+      if (strcmp (word, dict[mid]) == 0)
+	return 1;
+      else if (strcmp (word, dict[mid]) < 0)
+	high = mid - 1;
+      else
+	low = mid + 1;
+      if (low > high)
+	return 0;
+    }
+}

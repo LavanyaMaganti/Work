@@ -1,0 +1,22 @@
+01-20-2017:
+
+  chmod [-R] <mode> <file(s)...>	- Set permissions on file or files.
+    <Mode> has two possible forms, octal or ascii <[ugoa]+><[+-=]><[rwxts]+>
+    -R = Set permissions recursively.
+
+    ex:
+      chmod 755 ~/public_html
+       - Makes your public_html directory world accessible.
+      chmod ug=rw,o=r file
+       - Makes file read/write for user and group and read only for everyone
+         else.
+      chmod a+x file
+       - Makes file executable for everyone.
+
+  > more [<files>]
+  > less [<files>]
+   - Used to view files or the output of another program one screen page at a
+     time.
+    ex: less file.txt
+	ls -la | less
+	tree | less

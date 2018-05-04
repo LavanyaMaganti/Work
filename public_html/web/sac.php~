@@ -1,0 +1,62 @@
+<html>
+<title> sac -ah unix command </title>
+<style> 
+
+   table {
+//   border : 5px solid black;
+   border-collapse:collapse;
+   }
+tr:nth-child(even) {
+
+background : #ADD8E6;
+
+
+}
+tr:first-child{
+
+background : #ADD8E6;
+
+}
+
+td:last-child {
+
+background: white;
+}
+
+</style>
+<body>
+<table>
+<?php
+$op = `sac -ah`;
+$keywords = preg_split('/(?=[0-9][0-9]-:*)/i', $op);
+$count =0;
+ foreach ($keywords as $value) {
+   if($count <2)
+    {
+      $key = preg_split('/(Average)/', $value);
+        foreach($key as $value) {
+          if($count == 1)
+          {
+            echo "<tr> <td colspan='3'>Average $value</td></tr>";
+          }
+          else
+           echo "<tr> <td colspan='3'>$value</td></tr>";
+        $count = $count +1;
+        }
+    }
+  else
+  {
+      $c =0;
+
+      $key2 = preg_split('/\s+/', $value);
+   //   var_dump($key2);
+      echo "<td>$key2[0]</td>";
+      echo "<td>$key2[1]</td>";
+      echo "<td><meter max='max($key2[2])' value=".strlen($key2[2])."></meter></td>";
+      echo "</tr>";
+ }
+ }
+ ?>
+</table>
+</body>
+</html>

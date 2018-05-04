@@ -1,0 +1,74 @@
+<?php
+  include_once "config.php";
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> Login form </title>
+<meta charset='utf-8'>
+<style>
+body
+{
+  background-color:#D3D3D3;
+  /* background-image:url(intro5.jpg);
+   background-repeat:no-repeat;
+   background-size:cover;*/
+}
+h3
+{
+font-size:25pt;
+}
+.con
+{
+font-size:15pt;
+height:150px;
+width:2500px;
+}
+.box
+{
+margin:0px 1600px 0px 100px;
+height:25px;
+}
+.but
+{
+ font-size:16pt;
+ height:30px;
+ margin:100px 100px 0px 50px;
+ padding:5px 100px 35px 100px;
+}
+         
+</style>
+</head>
+
+<body>
+<form method="POST" action="login.html">
+<?php
+  echo"Helooo";
+  if(isset($_POST["submit"])){
+     $email = $_POST["email"];
+ 
+     $sql = "SELECT email FROM employee WHERE email='$email'";
+     $retval = mysql_query( $sql, $myconn );
+            
+    if(! $retval ) {
+      die('Could not get data: ' . mysql_error());
+    }else if($retval == $email){
+      echo "email matched";
+    }                          
+  }
+?>
+
+<br><br><br><h3 align='center'> <b> Sign in </b> </h3>
+<table class="con">
+<tbody>
+<tr align='right'> <td align> Email: <td> <input type="text" class="box" placeholder="someone@host" name="email" size=50 required> </td>
+<tr align='right'> <td> Password: <td> <input type="password" class="box" placeholder="minimum 8 characters" name="npwd" size=50 required> 
+</td>
+<tr> <td align='center'> <button type="submit" class="but">Sign in </button></td>
+</tbody>
+</table>
+</form>
+</body>
+          
+

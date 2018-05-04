@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>Let's Go!</title>
+</head>
+        
+<style>
+
+  #background {
+      width:300px;
+      height:400px;
+      background:black;
+      margin:50px auto;
+   }
+
+
+  #box-result {
+      top:10px;
+      width:230px;
+      height:40px;
+      margin:10px auto;
+      background:white;
+      padding-top:20px;
+      margin-left: 25px;
+      position: relative;
+   }
+   
+ 
+  #first-row {
+      margin-bottom: 20px;
+      position: relative;
+      top:10px;
+   }
+  
+  
+  .rows {
+      margin-left:25px;
+    }
+
+
+/* Button styling */
+
+  .btn-style {
+      width:50px;
+      height:50px;
+      margin-left:5px;
+      border-radius:4px;
+      border:3;
+   }             
+
+ 
+ /* Adding background color to the number values */
+ 
+  .num-bg {
+      background:#fdfefe;
+      color:#000;
+      font-size:26px;
+      border-bottom:3px solid #333;
+    }
+                  
+                  
+ /*Adding background color to the operator values */ 
+ 
+  .operator-bg {
+      background:#d35400;
+      color:#000;
+      font-size:26px;
+   }
+
+
+/*Adding a background color to the delete button */
+
+  #delete {
+      width:110px;
+      height:50px;
+      margin-left:25px;
+      border-radius:4px;
+      background:#d35400;
+      color:#000;
+      font-size:26px;
+   }
+                            
+                            
+ /*Adding a background color to the equals to button */
+  #eqn-bg {
+      background:#17a928;
+      color:#fff;
+      font-size:26px;
+      width:50px;
+      height:50px;
+      margin-left:5px;
+      border-radius:4px;
+   }
+                                                        
+
+</style>
+
+<body>
+  
+  <div id="background"><!-- Main background -->
+                                                                        
+    <div id="box-result"></div>
+                                                                                             
+      <div id="main">
+      
+        <div id="first-row">
+          <button id="delete">Del</button>
+          <button value="%" class="btn-style operator-bg">%</button>
+          <button value="+" class="btn-style operator-bg">+</button>
+        </div>
+        
+          <button value="7" class="btn-style num-bg rows">7</button>
+          <button value="8" class="btn-style num-bg num">8</button>
+          <button value="9" class="btn-style num-bg num">9</button>
+          <button value="-" class="btn-style operator-bg operator">-</button>
+          
+          <button value="4" class="btn-style num-bg rows">4</button>
+          <button value="5" class="btn-style num-bg num">5</button>
+          <button value="6" class="btn-style num-bg num">6</button>
+          <button value="*" class="btn-style operator-bg operator">x</button>
+
+          <button value="1" class="btn-style num-bg rows">1</button>
+          <button value="2" class="btn-style num-bg num">2</button>
+          <button value="3" class="btn-style num-bg num">3</button>
+          <button value="/" class="btn-style operator-bg">/</button>   
+
+
+          <button value="0" id="delete">0</button>
+          <button value="." class="btn-style num-bg">.</button>
+          <button value="=" id="eqn-bg">=</button>
+
+     </div>
+  
+  </div>
+
+</body>
+
+</html>

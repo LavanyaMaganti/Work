@@ -1,0 +1,135 @@
+
+#include <stdio.h>
+#include <math.h>
+
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#endif
+
+#define RAD2DEG(X)   ((X * 180.0)/M_PI)
+
+typedef struct thing {
+   double x, y, z;     // position
+   double vx, vy, vz;  // velocity
+   double theta, phi;  // heading (orientation) angles
+   double len;
+} THING;
+
+typedef struct eye {
+   double x,y,z;
+} EYE;
+
+EYE eye;
+THING it;
+
+void init();
+void display();
+void keyboard(unsigned char c, int x, int y);
+void specialkeyboard(int c, int x, int y);
+
+int main(int argc, char *argv[])
+{
+   glutInit(&argc,argv);
+   glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
+   glutInitWindowSize(800,800);
+   glutInitWindowPosition(80,60);
+   glutCreateWindow("First Program Today");
+
+   glutDisplayFunc(display);
+   glutKeyboardFunc(keyboard);
+   glutSpecialFunc(specialkeyboard);
+
+   init();
+
+   glutMainLoop();
+}
+void init()
+{
+  glClearColor(0.0, 0.0, 0.0, 1.0);
+  it.x  = it.y  = it.z  = 0.0; 
+  it.vx = it.vy = it.vz = 0.0; 
+  it.theta = 0.0;                    // this is used
+  it.phi   = 0.0;
+  it.len   = 0.25;
+
+  eye.x =  0.0;
+  eye.y =  0.1;
+  eye.z = -1.0;
+}
+void drawcar()
+{
+  glPushMatrix();
+  glColor3f(1.0,1.0,0.0);          // yellow
+  glBegin(GL_LINES);
+    glVertex3f(-2.0, 0.0, 0.0);
+    glVertex3f( 2.0, 0.0, 0.0);    // x-axis
+    glVertex3f(0.0, -2.0, 0.0);
+    glVertex3f(0.0,  2.0, 0.0);    // y-axis
+    glVertex3f(0.0, 0.0, -2.0);
+    glVertex3f(0.0, 0.0,  2.0);    // z-axis
+  glEnd();
+  glColor3f(1.0,0.0,0.0);
+  glBegin(GL_LINE_LOOP);
+    glVertex3f( 0.5, 0.09,-0.1);
+    glVertex3f(-0.5, 0.09,-0.1);
+    glVertex3f(-0.5, 0.09, 0.1);
+    glVertex3f( 0.5, 0.09, 0.1);
+  glEnd();
+  glColor3f(0.0,1.0,0.0);
+  glBegin(GL_LINE_LOOP);
+    glVertex3f( 0.5, 0.1,-0.1);
+    glVertex3f(-0.2, 0.2,-0.1);
+    glVertex3f(-0.5, 0.1,-0.1);
+    glVertex3f(-0.5, 0.1, 0.1);
+    glVertex3f(-0.2, 0.2, 0.1);
+    glVertex3f( 0.5, 0.1, 0.1);
+  glEnd();
+  glBegin(GL_LINES);
+    glVertex3f(-0.2, 0.2,-0.1);
+    glVertex3f(-0.2, 0.2, 0.1);
+    glVertex3f( 0.5, 0.1,-0.1);
+    glVertex3f( 0.5, 0.1, 0.1);
+  glEnd();
+  glPopMatrix();
+}
+void display()
+{
+   double xzlen;
+   double dx,dy,dz;
+
+   glMatrixMode(GL_PROJECTION);
+   glLoadIdentity();
+   glOrtho(-3.0, 3.0,-3.0, 3.0,-3.0, 3.0);
+   gluLookAt(eye.x,eye.y,eye.z,
+             0.0, 0.1, 0.0,
+             0.0, 1.0, 0.0);
+
+   glMatrixMode(GL_MODELVIEW);
+   glClear(GL_COLOR_BUFFER_BIT);
+   glPushMatrix();
+   glLoadIdentity();
+   glTranslatef(it.x, it.y, it.z);
+   glRotatef(RAD2DEG(it.theta), 0.0, 1.0, 0.0);
+   drawcar();
+   glPopMatrix();
+   glutSwapBuffers();
+}
+void keyboard(unsigned char c, int x, int y)
+{
+   switch(c){
+     case 27: exit(0);
+   }
+}
+void specialkeyboard(int kno, int x, int y)
+{
+   switch(kno){
+     case GLUT_KEY_DOWN : eye.y -= 0.05; break;
+     case GLUT_KEY_UP   : eye.y += 0.05; break;
+     case GLUT_KEY_LEFT : it.theta += 0.05; break;
+     case GLUT_KEY_RIGHT: it.theta -= 0.05; break;
+   }
+   fprintf(stderr,"eye.y = %lf\n", eye.y);
+   glutPostRedisplay();
+}

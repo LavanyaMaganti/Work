@@ -1,0 +1,74 @@
+<html>
+<title> sac -ah unix command </title>
+<style> 
+
+   table {
+//   border : 5px solid black;
+   border-collapse:collapse;
+   }
+tr:nth-child(even) {
+
+background : #ADD8E6
+
+
+}
+tr:first-child{
+
+background : #ADD8E6
+
+}
+</style>
+<body>
+<table>
+<?php
+$op = `sac -ah`;
+//echo "<tr> <td> $op </td> </tr>";
+//$arr = split  ("/\,/",$op);
+//print_r(explode(" ",$op));
+//print "$arr[0] <br>";
+
+// split the phrase by any number of commas or space characters,
+// which include " ", \r, \t, \n and \f
+//$keyword = preg_split('/login/', $op);
+//$keywords = preg_split("/([0-9])/i", $op);
+//print_r($keywords);
+//$arr = split  ("/\ /",$keywords);
+//print "$arr[0] <br>";
+$keywords = preg_split('/(?=[0-9][0-9]-:*)/i', $op);
+$count =0;
+ foreach ($keywords as $value) {
+   if($count <2)
+    {
+ $key = preg_split('/(Average)/', $value);
+    foreach($key as $value) {
+     if($count == 1)
+      {
+     echo "<tr> <td>Average $value</td></tr>";
+      }
+    else
+     echo "<tr> <td>$value</td></tr>";
+$count = $count +1;
+    }
+  }
+ else
+  {
+$c =0;
+echo "<tr>";
+ $key2 = preg_split('/  /', $value);
+    foreach($key2 as $value) {
+ $key1 = preg_split('/#*/',$value);
+    foreach($key1 as $value) {
+     echo "<td>$value</td>";
+$c = $c+1;;
+  }
+}
+$d = $c-2;
+//  echo "<td>$d</td>";
+ echo "<td><meter value='$d' min='0' max='64'> </meter></td>";
+ echo "</tr>";
+   }
+ }
+ ?>
+</table>
+</body>
+</html>

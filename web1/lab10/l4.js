@@ -1,0 +1,24 @@
+
+
+/**
+ * Save the first command line argument as an integer into a variable called n:
+ */
+
+
+
+/**
+ * Make a pyramid out of stars that is n rows high:
+ * Example input/output:
+ * ./l4.js 5
+ *     *
+ *    ***
+ *   *****
+ *  *******
+ * *********
+ */
+
+
+
+
+
+

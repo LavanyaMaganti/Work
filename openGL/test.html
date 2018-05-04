@@ -1,0 +1,42 @@
+<html>
+<head>
+<script>
+var x1,y1,x2,y2;
+var state = false;
+var can, gc;
+
+
+function putpixel(x,y)
+{
+
+  gc.strokeRect(x,y,10,10);
+
+}
+
+function setup()
+{
+  can = document .getElementById("can");
+  gc = can.get.Context("2d");
+  gc.fillStyle = "wheat";
+  gc.fillRect(0,0,can.width,can.height);
+}
+
+function addpoint(ev)
+{
+  var xoff,yoff;
+  
+  xoff = ev.offsetLeft();
+  yoff =ev.offsetTop();
+}
+
+</script>
+</head>
+<body onload = "setup()">
+
+<center>
+<canvas onclick="addpoint(event)" id="can" width="1024" height="768">
+Bad browser.
+</canvas>
+</center>
+</body>
+</html>

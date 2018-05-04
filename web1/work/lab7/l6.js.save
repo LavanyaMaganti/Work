@@ -1,0 +1,63 @@
+
+
+/**
+ * The only built-in functions you may use for this assignment is Math.floor()
+ * and parseInt().
+ */
+/**
+ * Create four functions called 'days', 'hours', 'minutes' and 'seconds' that
+ * when given a number of seconds returns numerically how many days, hours
+ * (minus days), minutes (minus hours and days) or seconds (minus minutes/hours/
+ * and days) it represents.  Note that there are 86400 seconds in a day and 3600
+ * in an hour.  The functions should return an integer number of days/hours/
+ * minutes/seconds (not a fractional number.)  Use Math.floor(x) to get the
+ * integer portion of x.
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Get two command line parameters as integers, call them 'a' and 'b':
+ */
+
+
+
+/**
+ * If b is less than a, switch a and b so that a is less than b.
+ */
+
+
+
+
+
+/**
+ * Do not modify anything below this:
+ * Example input/output:
+ * ./l6.js 1000 340593
+ * The difference in time is: 3 days, 22 hours, 19 minutes, 53 seconds
+ */
+var dt = b-a;
+console.log("The difference in time is: " +
+  days(dt) + " days, " +
+  hours(dt) + " hours, " +
+  minutes(dt) + " minutes, " +
+  seconds(dt) + " seconds");

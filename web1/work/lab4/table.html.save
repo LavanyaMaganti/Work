@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> </title>
+ <meta charset='utf-8'>
+ <style>
+ /* For extra fun, try to confine all styling to this section if you can.
+ Table facts:
+  1. The width and height of each cell is 40 pixels.
+  2. There is 5 pixels of spacing between cells.
+  3. The background colors are lightblue, lightgreen, yellow and orange.
+  4. The text is centered in every table cell.
+  5. The text at the top and left side is bold-ed.
+ */
+
+
+ </style>
+</head>
+<body>
+ <!-- Format the below into a table with its border turned on: -->
+<table>
+  <tr>
+    <td>
+
+  X  1  2  3  4
+  1  1  2  3  4
+  2  2  4  6  8
+  3  3  6  9  12
+  4  4  8  12 16
+
+</body>
+</html>

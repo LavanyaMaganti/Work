@@ -1,0 +1,32 @@
+04-04-2017
+
+- Go over test2
+
+
+The "for" loop:
+==============
+- Many loops have the form:
+
+  <initilize some index variable(s)>
+  while (<test expression>) {
+    <statements>
+    <increment index variable(s)>
+  }
+
+  so a specific type of loop was created to handle this form specifically, it
+  is the "for" loop:
+  
+  for(<init expr>; <test expr>; <inc expr>) <statement>
+  - All three expressions are optional and may be omitted, however the ;'s
+    must remain present. i.e.:
+      
+    for(;;) <stmt>;	// Will loop forever.
+
+  - <init expr> is only performed once. May declare variables using var inside
+    this expression, however these variables are not visible outside of the
+    for loop.
+  - <test expr> is performed at the beginning of each loop, performing the
+    statement only if this is true.  If omitted it is always true.
+  - <inc expr> is performed after the statement (or compound statement)
+    at the end of each loop.  This is always executed even if a continue is
+    raised.

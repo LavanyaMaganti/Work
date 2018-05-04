@@ -1,0 +1,35 @@
+#include <stdio.h> include <stdlib.h> include <string.h> define MAX 1024 define ADD 2 define SUB 1 define MUL 4 define DIV 3
+int prec(char); int main( int argc, char *argv[]){
+  int i; int top = -1, len; //Stack is Empty
+ 
+  char temp[5]; if( argc < 4){
+    printf("Invalid Format. Expected ./a.out A + B\n"); exit(0);
+  }
+   
+  char *stack, *output; stack = (char*) malloc(1024); //This is equivalent to stack[argc] output = (char*) malloc(1024); //This is equivalent to 
+  stack[argc] for(i = 1; i < argc ; i++) {
+    if( isalpha(argv[i][0]) || isdigit(argv[i][0]) ){ strcat(output," "); strcat(output,argv[i]);
+    }
+    else if(strcmp(argv[i],"(") == 0){ top ++; stack[top] = argv[i][0];
+    }
+    else if(strcmp(argv[i],")") == 0){
+      while (stack[top] !='('){ temp[0] = ' '; temp[1] = stack[top]; temp[2] = '\0'; strcat(output,temp); top --;
+      } 
+      top --;
+    }
+    else { //Its an Operator. Do something
+      while ( top != -1 && (prec(argv[i][0])< prec(stack[top])) ){ temp [0] = ' '; temp[1] = stack[top]; temp[2] = '\0'; strcat(output,temp); top --;
+      }
+      top ++; stack[top] = argv[i][0];
+    }
+  }//End of For
+  //While stack not empty put everything to the end of output while(top != -1){ temp[0] = ' '; temp[1] = stack[top]; temp[2] = '\0'; 
+  strcat(output,temp); top --;
+  }
+  printf("Postfix Expression: %s\n",output);
+}
+int prec(char a){
+  switch(a){
+    case '+': return ADD; //2 case '-': return SUB; //1 case '*': return MUL; //4 case '/': return DIV; //3 case '(': return 0; //3
+  }  
+}

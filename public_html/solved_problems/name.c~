@@ -1,0 +1,33 @@
+#include <stdio.h> include <stdlib.h> include <string.h>
+
+
+
+
+int
+main ()
+{
+  char name[50];
+  int name_len, llen, i;
+  int invalid = 0;		// Set valid as 0 printf("Enter Name: "); fgets(name,50,stdin);
+  //Removing the \n at the end name_len = strlen(name); name[name_len-1] = '\0';
+
+  do
+    {
+      invalid = 0;
+      if (strlen (name) < 25)
+	{			//If name is less than 25 characters.
+	  //For phone strlen(phone) == 10 && phone[3]=='-' && phone[7]=='-' for ( i = 0 ; i < strlen(name); i++){ if( isalpha(name[i]) && 
+	  name[i] != ' ') invalid = 1;
+	}
+      if (invalid == 0)
+	break;
+    }
+  fflush (stdin);
+  printf ("Invalid format.Enter Name: ");
+  fgets (name, 50, stdin);
+  name_len = strlen (name);	//Removing the \n at the end. 
+  name[name_len - 1] = '\0';
+  }
+  while (1);
+  printf ("Name %s is valid\n", name);
+  }

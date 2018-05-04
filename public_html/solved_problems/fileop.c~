@@ -1,0 +1,54 @@
+// file operation
+
+#include <stdio.h> 
+#include <stdlib.h>
+
+int main (int argc, char *argv[])
+{
+  char filename[100];
+  char buffer[1024];
+  char sentence[200];
+  char c;
+  FILE *fd;
+  int i = 0;
+  void *content = malloc(BUF_SIZE);
+  printf ("Enter Filename: ");
+ scanf ("%s",filename);
+//scanf("%s",text);
+ printf("ENTER TEXT\n");
+  fd = fopen (filename, "w");
+    if (fd == NULL)
+    {
+      printf ("File Does not Exist.\n");
+      exit (0);
+    }
+//fscanf(fd,"TESTING..\n");
+//fputs("This is for test...\n",fd);
+//while((c=getchar())!='\n')
+//{
+
+//sentence[i++]=c;
+
+//}
+//sentence[i]='\0';
+//printf("Entered text\n");
+//puts(sentence);
+//fprintf(fd,"%s",text);
+
+
+printf("About to write\n");
+    int read;
+        while ((read = fread(content, BUF_SIZE, 1, stdin))) {
+                printf("Read %d bytes", read);
+                        fwrite(content, read, 1, fp);
+                                printf("Writing %d\n", read);
+                                    }
+                                        if (ferror(stdin))
+                                                printf("There was an error reading from stdin");
+                                                
+                                                    printf("Done writing\n");
+fclose(fd);
+
+
+
+}

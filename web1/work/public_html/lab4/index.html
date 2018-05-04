@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> Lab exercise #4 image comparator </title>
+ <meta charset='utf-8'>
+ <style>
+ table { border-collapse: collapse; }
+  #img { width: 800px; height: 600px; padding: 0; margin: 0}
+  .ibox {
+    width: 806px; height: 604px; border: 1px solid black;
+    padding: 0; margin: 0;
+  }
+  .box {
+    float: left;
+    width: 65px; height: 65px;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+  }
+ </style>
+ <script>
+ function flip(path, label) {
+   document.getElementById("img").src = path;
+   document.getElementById("label").innerHTML = label;
+ }
+ </script>
+</head>
+<body>
+  <table>
+  <tbody>
+   <tr><td id='label'>Reference Image
+   <tr><td class='ibox'><img id='img' src='http://cs.indstate.edu/~sbaker/cs151/lab4/listRef.png' alt='No Image, probably means its OK.'>
+   <tr><td> Mouse over the boxes to switch images:
+   <tr>
+    <td>
+     <div class='box' onmouseover='flip("http://cs.indstate.edu/~sbaker/cs151/class/lab4/listRef.png","Reference list");'> Ref<br> h1</div>
+     <div class='box' onmouseover='flip("listRef.png","Your list");'> Your<br> list </div>
+     &nbsp;
+     <div class='box' onmouseover='flip("http://cs.indstate.edu/~sbaker/cs151/class/lab4/tableRef.png","Reference table");'> Ref<br> h2</div>
+     <div class='box' onmouseover='flip("tableRef.png","Your table");'> Your<br> table </div>
+  </tbody>
+  </table>
+</body>
+</html>

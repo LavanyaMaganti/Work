@@ -1,0 +1,75 @@
+04-11-2017
+
+- Went over labs 5 and 6.
+
+---
+  // Given an array a:
+  var a = [1, 5, 20, -6, 35, -100, 50, 40, 16];
+
+  // Find the largest element of a:
+  var max = a[0];
+  for(var i=1; i < a.length; i++) {
+    if (max < a[i]) max = a[i];
+  }
+  console.log("The largest element in a is: " + max);
+
+---
+  // Find the second largest element:
+  var max = Math.max(a[0], a[1]);
+  var second = Math.min(a[0], a[1]);
+  for(var i = 2; i < a.length; i++) {
+    if (max < a[i]) {
+      second = max;
+      max = a[i];
+    }
+    if (second < a[i] && a[i] < max) second = a[i];
+  }
+  console.log("The second largest element of a is: " + second);
+
+---
+  for(i=0; i < 10; i++) {
+    if (i < 3) continue;
+    if (i > 6) break;
+    console.log(i);
+  }
+
+---
+  var str = "some string";
+  var xs = 0;
+  for(var i=0; i < str.length; i++) {
+    if (str[i] == 'x') xs++;
+  }
+  // <<Note that i is not available outside of the loop since it was declared
+  // with var inside the for() part.>>
+  console.log("# of X's = " + xs);
+
+---
+  /**
+   * Returns the sub-string starting at offset and up to length bytes (or the
+   * end of the string if not given.
+   */
+  function substr(str, offset, length) {
+    // If length is "undefined" it wasn't passed to the function so we give it
+    // a default value:
+    if (typeof length == "undefined") length = str.length;
+    // If offset is not within the string, return an empty string:
+    if (offset < 0 || str.length <= offset) return "";
+    // Loop copies characters from str starting at offset 
+    var s = "";
+    for( ;str[offset] !== undefined && length > 0; offset++, length--) {
+      s += str[offset];
+    }
+    return s;
+  }
+
+---
+  /**
+   * Returns the index of "needle" in "haystack" or -1 if not found.
+   */
+  function locate(haystack, needle) {
+    var i = 0;
+    for(; i < haystack.length; i++) {
+      if (haystack[i] === needle) return i;
+    }
+    return -1;
+  }

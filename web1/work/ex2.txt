@@ -1,0 +1,42 @@
+CS151 Lab exercise #2 (5 pts)
+
+The following are to be done in your CS151 class account.  Use the "man" command
+for more information on specific commands.  You may need to use the following
+commands: cd, ls, cp, mkdir, chmod, more, less, and an editor of some kind.
+
+Make a directory called lab2 in your CS151 accounts' home directory.  Inside
+this directory perform the following:
+
+1) Make three directories, called a, b and c.  (1/2pt)
+2) Make the permissions on a: read/write/search for user, none for group and
+   read and search for other.  (1/2pt)
+3) Make the permissions on b: read/write/search for user, read and search for
+   group and none for other.  (1/2pt)
+4) Make the permissions on c: read/write and search (execute) for user, group
+   and other.  (1/2pt)
+
+5) Copy the file /u1/junk/cs151/services into a.  (1/2pt)
+6) Copy the file /u1/junk/cs151/fstab into b.  (1/2pt)
+7) Copy the file /u1/junk/cs151/rgb.txt into c.  (1/2pt)
+
+8) Create a file in lab2 called, numbers, edit the file and place the following
+   three numbers, one to a line: (1.5pts)
+   b) The first number on the line for "LimeGreen" in the rgb.txt file.  To find
+      this number quickly, use the '/' key in more or less to search for a
+      string in the file.
+   a) The size of the fstab file in bytes.
+   c) The number found on the line in /etc/services for 'wizard'.
+
+- You may use the command "labcheck 2" to check your work.  Note this
+  auto-checker may not be perfect.  The numbers file should contain no extra
+  spaces or lines.
+
+The tree view of lab2 (using the 'tree lab2' command) should look like this:
+lab2
+|-- a
+|   `-- services
+|-- b
+|   `-- fstab
+|-- c
+|   `-- rgb.txt
+`-- number

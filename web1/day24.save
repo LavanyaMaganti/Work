@@ -1,0 +1,73 @@
+
+04-13-2017
+
+---
+  /**
+   * Reverse the string s:
+   */
+  function reverse(s) {
+    var r = "";
+    for(var i=s.length-1; i >= 0; i--) {
+      r += s[i];
+    }
+    return r;
+  }
+
+Objects
+=======
+- Objects in JS are much like arrays with the exception that instead of numeric
+  indices, you are allowed to use names to refer to elements within the object.
+  These names are often called 'keys', which then have associated values so
+  are often called 'key/value' pairs.
+- Objects such as these are often called maps or associative arrays.
+  << Objects in JS are not quite the same as objects that you might find in
+   other languages such as C++ or Java where objects are derived from "classes".
+   There are no classes in JavaScript. >>
+
+- Object literal syntax:
+  var obj = {
+    'name' : 'value',
+    'name2': 'value2',
+    ...
+  };
+
+- Then to access a value:
+
+    obj['name']
+
+  You can add key/values to the object as well:
+
+    obj['name'] = "Bob";
+    
+- As long as name looks like a normal variable name (i.e. starts w/ a letter
+  and contains nothing but letters, numbers and _'s) you may use it w/o quoting
+  it.  In this case you may also use the dot (.) accessor method to access a
+  value, i.e.:
+
+    var name = obj.name;
+
+  You can add a key/value to an object via this method as well:
+
+    var point = {};	// Creates an empty object
+    point.x = 10;	// Adds 'x' to point with the value 10.
+    point.y = 15;	// Adds 'y' to point with the value 15.
+
+- Testing if an object contains a particular key or index:
+
+  "member" in <object|array>
+   - Returns true if the key "member" is found within the object, false
+     otherwise. For arrays member should be an integer index.  For objects it
+     can be either an integer index or a string key name.
+
+  ex:
+    "z" in point;	// Returns true
+
+for-in:
+======
+- There is a final type of loop in JavaScript called the for-in variant, it
+  looks like:
+
+  for(<variable> in <array|object>) <statement>;
+  - Iterates over the properties (indexes or keys) in an array or object,
+    placing them in the <variable> one at a time.  Also skips over undefined
+    sections (holes) in an array.

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> num.html </title>
+<meta charset='utf-8'>
+
+<style>
+
+h1 {
+    font-family:"Patea one";
+    font-size:28pt;
+    line-height:1;
+   }
+
+.con {
+      font-size: 15pt;
+      border: 1px solid black;
+      padding: 22px;
+      margin: 20px;
+      width: 23px;
+      line-height:1.5;
+     }
+     
+.bot {
+      border-bottom: 1px solid grey; 
+     }
+
+.color {
+        color: red;
+       }
+       
+  .num123 {
+  height:30px;
+  font-size: 20pt;
+  }
+
+      
+</style>
+
+</head>
+
+<body>
+
+<script>
+
+function convertor()
+{
+  var num = parseInt(document.getElementById("n").value);
+  var a = num.toString();
+  var b = num.toString(16);
+  var c = num.toString(8);
+  var d = num.toString(2);
+  
+  document.getElementById("dec").innerHTML = a;
+  document.getElementById("hex").innerHTML = b;
+  document.getElementById("oct").innerHTML = c;
+  document.getElementById("bin").innerHTML = d;
+  
+}
+
+</script>
+
+<h1> Assignment #5 </h1>
+
+<table class="con">
+<col width="1">
+<tbody>
+<tr>
+<td colspan="2" class="hei"> <input class="num123" type="number" id="n" style="width: 350px;" onchange="convertor()"> </td>
+</tr>
+
+<tr> 
+<td class="color" align='right'> Dec:  </td>
+<td class="bot" id="dec"> </td>
+</tr>
+
+<tr>
+<td class="color"> Hex: </td>
+<td class="bot" id="hex"> </td>
+</tr>
+
+<tr>
+<td class="color" align='right'> Oct: </td>
+<td class="bot" id="oct"> </td>
+</tr>
+
+<tr>
+<td class="color" align='right'> Bin: </td>
+<td class="bot" id="bin"> </td>
+</tr>
+
+</tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> </title>
+ <meta charset='utf-8'>
+ <style>
+ /* For extra fun, try to confine all styling to this section if you can.
+ Table facts:
+  1. The width and height of each cell is 40 pixels.
+  2. There is 5 pixels of spacing between cells.
+  3. The background colors are lightblue, lightgreen, yellow and orange.
+  4. The text is centered in every table cell.
+  5. The text at the top and left side is bold-ed.
+ */
+
+th,tr,td {
+  width:40px;
+  height:40px;
+  text-align:center;
+}
+
+table {
+  border-spacing: 5px;
+  }
+
+#orange {
+background-color:orange;
+}
+
+#yellow {
+background-color:yellow;
+}
+
+#lightgreen {
+background-color:lightgreen;
+font-weight:bold;
+}
+
+#lightblue {
+background-color:lightblue;
+font-weight:bold;
+}
+
+ </style>
+</head>
+<body>
+ <!-- Format the below into a table with its border turned on: -->
+<table border=1>
+  <tr>
+    <th id="orange">X
+    <th id="lightblue">1
+    <th id="lightblue">2
+    <th id="lightgreen">3
+    <th id="lightblue">4
+ </tr>
+ <tr>
+  <td id="lightblue">1
+  <td>1
+  <td>2
+  <td id="yellow">3
+  <td>4
+ </tr>
+ <tr>
+  <td id="lightblue">2
+  <td>2
+  <td>4
+  <td id="yellow">6
+  <td>8
+ </tr>
+ <tr>
+  <td id="lightgreen">3
+  <td id="yellow">3
+  <td id="yellow">6
+  <td id="orange">9
+  <td>12
+ </tr>
+ <tr>
+  <td id="lightblue">4
+  <td>4
+  <td>8
+  <td id="yellow">12
+  <td>16
+ </tr>
+</table>
+</body>
+</html>

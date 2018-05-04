@@ -1,0 +1,60 @@
+// Bubble Sort
+
+
+#include <stdio.h> include <stdlib.h>
+
+
+#define MAX 1000000
+
+int numbers[MAX];
+
+void populate_numbers (int);
+void print_numbers (int);
+void bubble_sort (int);
+int
+main ()
+{
+  int n;
+  printf ("Enter n: ");		// n is the no of elements scanf("%d", &n); while( n > MAX){
+  printf ("n should be less than a million. Enter n: ");
+  scanf ("%d", &n);
+}
+
+populate_numbers (n);		//Which populates my array with random numbers printf("Unsorted:\n"); print_numbers(n); bubble_sort(n); printf("Sorted:\n"); 
+print_numbers (n);
+}
+
+void
+populate_numbers (int n)
+{
+  int i;
+  srand ((unsigned) getpid ());
+  for (i = 0; i < n; i++)
+    numbers[i] = rand () % 100;	//Random numbers return;
+}
+
+void
+print_numbers (int n)
+{
+  int i;
+  for (i = 0; i < n; i++)
+    printf ("%d ", numbers[i]);	//Random numbers printf("\n"); return;
+}
+
+void
+bubble_sort (int n)
+{
+  int i, j;
+  int temp;
+  for (i = 0; i < n - 1; i++)
+    {
+      for (j = 0; j < n - 1; j++)
+	{
+	  if (numbers[j] > numbers[j + 1])
+	    {
+	      temp = numbers[j];	//Swaping numbers[j] = numbers[j+1]; numbers[j + 1] = temp;
+	    }
+	}
+    }
+  return;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>Calculator</title>
+</head>
+        
+<style>
+
+/*
+background should 
+
+
+*/
+  #background {
+      width:300px;
+      height:400px;
+      background:black;
+      margin:50px auto;
+   }
+
+
+  #box-result {
+      top:10px;
+      width:230px;
+      height:40px;
+      margin:10px auto;
+      background:white;
+      padding-top:20px;
+      margin-left: 25px;
+      position: relative;
+   }
+   
+ 
+  #first-row {
+      margin-bottom: 20px;
+      position: relative;
+      top:10px;
+   }
+  
+  
+  #rows {
+      margin-left:20px;
+    }
+
+
+/* Button styling */
+
+  .btn-style {
+      width:50px;
+      height:50px;
+      margin-left:6px;
+      border-radius:4px;
+      border:3;
+   }             
+
+ 
+ /* Adding background color to the number values */
+ 
+  .num-bg {
+      background:#fdfefe;
+      color:#000;
+      font-size:26px;
+      border-bottom:3px solid #333;
+    }
+                  
+                  
+ /*Adding background color to the operator values */ 
+ 
+  .operator-bg {
+      background:#d35400;
+      color:#000;
+      font-size:26px;
+   }
+
+
+/*Adding a background color to the delete button */
+
+  #delete {
+      width:110px;
+      height:50px;
+      margin-left:25px;
+      border-radius:4px;
+      background:#d35400;
+      color:#000;
+      font-size:26px;
+   }
+                            
+                            
+</style>
+
+<body>
+  
+  <div id="background">
+                                                                        
+    <div id="box-result"></div>
+                                                                                             
+      <div id="main">
+      
+        <div id="first-row">
+          <button id="delete">Del</button>
+          <button value="%" class="btn-style operator-bg">%</button>
+          <button value="+" class="btn-style operator-bg">+</button>
+        </div>
+
+        <div id="rows">
+          <button value="7" class="btn-style num-bg rows">7</button>
+          <button value="8" class="btn-style num-bg rows">8</button>
+          <button value="9" class="btn-style num-bg rows">9</button>
+          <button value="-" class="btn-style operator-bg ">-</button>
+        </div>
+        
+        <div id="rows">        
+          <button value="4" class="btn-style num-bg rows">4</button>
+          <button value="5" class="btn-style num-bg">5</button>
+          <button value="6" class="btn-style num-bg">6</button>
+          <button value="*" class="btn-style operator-bg">x</button>
+        </div>
+        
+        
+        <div id="rows">        
+          <button value="1" class="btn-style num-bg">1</button>
+          <button value="2" class="btn-style num-bg">2</button>
+          <button value="3" class="btn-style num-bg">3</button>
+          <button value="/" class="btn-style operator-bg">/</button>   
+        </div>
+
+        <div id="first-row">
+          <button value="0" id="delete">0</button>
+          <button value="." class="btn-style num-bg">.</button>
+          <button value="=" class="btn-style operator-bg">=</button>
+        </div>
+     </div>
+  
+  </div>
+
+</body>
+
+</html>

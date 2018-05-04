@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+<title> Main page </title>
+<meta charset=utf-8>
+
+<style>
+body
+{
+background-image:url(intro4.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+}
+#search
+{
+float:right;
+}
+.men {
+  background-color: blue;
+  color: white;
+  padding: 14px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+.drop {
+ position: relative;
+ display: inline-block;
+}
+.content {
+ display: none;
+ position: absolute;
+ background-color: #f9f9f9;
+ min-width: 160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.content a {
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: inline-block;
+}
+.content a:hover {background-color: black}
+
+.drop:hover .content {
+ display: block;
+}   
+.drop:hover .men {
+ background-color: #3e8e41;
+}
+
+a:hover
+{
+color:white;
+}
+</style>
+<script>
+var photoOrder=[1,2,3,4,5];
+var fcount=5;
+fig();
+
+funtion fig(){
+var Name;
+var currentfig;
+var i;
+for(var i=1,i<6,i++){
+Name="fig_0" + photoOrder[i] + ".jpg";
+currentfig=document.getElementByTagName("img") [i-1];
+currentfig.src=Name;
+}
+
+</script>
+</head>
+<body>
+<h2> 
+<span class="spacer">&nbsp;</span>
+<a href="p.html"> Sign up</a>
+<input type="text" name="search" id="search" placeholder="search.." align="right" width="50px" height="30px">
+<div class="drop">
+  <button class="men">Men</button>
+    <div class="content">
+    <a href="#">Shirts</a>
+    <a href="#">Bottoms</a>
+    <a href="#">Watches</a>
+    </div>
+</div>
+<div class="drop">
+  <button class="men">Women</button>
+    <div class="content">
+    <a href="#">Tops</a>
+    <a href="#">Kurtis</a>
+    <a href="#">Jeans</a>
+    <a href="#">Accesories</a>
+    </div>
+</div>
+<article>
+  <figure id="fig1">
+    <img width="240" height="134"/>
+  </figure>
+  <figure id="fig2">
+    <img width="360" height="202"/>
+  </figure>
+  <figure id="fig3">
+    <img width="480" height="270"/>
+  </figure>
+  <figure id="fig4">
+    <img width="360" height="202"/>
+  </figure>
+  <figure id="fig5">
+    <img width="240" height="134"/>
+  </figure>
+</article>
+</body>
+</html>
+

@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+
+int main()
+{
+printf("Welcome! Select an option:\n");
+printf("1: Decimal to Binary.\n");
+printf("2:Binary to Decimal.\n");
+printf("Enter your Choice:

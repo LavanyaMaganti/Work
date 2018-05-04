@@ -1,0 +1,81 @@
+#!/usr/local/bin/node
+
+/**
+ * The only built-in functions you may use for this assignment is parseInt().
+ */
+
+/**
+ * Create a function called islittleprime that returns true if the input
+ * argument is not divisible by 2, 3, 5, 7, 11 or 13 and returns false if it is
+ * divisible by any of the above.  At each step check if it's equal to the
+ * number you're about to check, and if so, return true. Returning true may mean
+ * the input number is prime.
+ */
+
+function islittleprime(a) {
+/*    if(a%2==0 || a%3==0 || a%5==0 || a%7==0 || a%11==0 || a%13==0) {
+      return false;
+    }
+    else if(a==2 || a==3 || a==5 || a==7 || a==11 || a==13) {
+      return true;
+    }
+*/
+
+if(a==2 || a==3 || a==5 || a==7 || a==11 || a==13) return true;
+if(a%2==0 || a%3==0 || a%5==0 || a%7==0 || a%11==0 || a%13==0) return false;
+}
+
+
+/**
+ * Create a function called isbiggerprime takes an integer argument that first 
+ * checks it against islittleprime() if that is true it then checks if it is
+ * divisible by 17, 19, 23, 29 and 31, returning true if none of them are or
+ * if the number is equal to the number you're currently checking against.
+ * Otherwise it should return false if any of the checks fail.
+ */
+
+function isbiggerprime(b){
+  var res1=islittleprime(b);
+      if(res1==true){
+        if(b%17==0 || b%19==0 || b%23==0 || b%29==0 || b%31==0) return false;
+        if(b==17 || b==19 || b==23 || b==29 || b==31) return true;
+        else return false;
+    }
+ }
+
+
+/*
+  * Get the first command line parameters as an integer called 'n'
+ */
+
+var n=parseInt(process.argv[2]);
+
+
+/**
+ * Call isbiggerprime passing it the number n, if it's true and n < 1369 print
+ * "definitely prime", if it's true and n >= 1369 print "maybe prime", if
+ * isbiggerprime returns false, print "composite".
+ * Example input/output:
+ * ./l7.js 101
+ * definitely prime
+ * ./l7.js 93
+ * composite
+ * ./l7.js 1697
+ * maybe prime
+ */
+
+var result=isbiggerprime(n);
+//console.log(result);
+if(result==true && n<1369) {
+  console.log("definitely prime");
+  }
+  
+  else if(result==true && n>=1369) {
+    console.log("maybe prime");
+  }
+  else if(result ==false) {
+    console.log("composite");
+  }
+
+
+

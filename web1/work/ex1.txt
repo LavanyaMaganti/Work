@@ -1,0 +1,31 @@
+CS151 Lab exercise #1
+
+The following are to be done in your CS151 class account.  Use the "man" command
+for more information on specific commands.  You may need to use the following
+commands: cd, ls, cp, mkdir, chmod, more, less, and an editor of some kind.
+
+1. Make a directory called public_html in you home directory.  Make sure that
+   the "other" permissions are set to read and search (execute) on the
+   directory, and that the group owner has no permissions. (1pt)
+
+2. Make permissions on your home directory such that owner has full permissions,
+   group has no permissions and "other" has search (execute) only permissions.
+   (1pt)
+
+3. Copy the file "index" located at ~sbaker/public_html/cs151/class/ to
+   your public_html directory as the file "index.html".  Do not include the
+   quotation marks in your file-names. (1pt)
+
+4. Edit the index.html file you copied and edit it to customize it in the
+   following ways: (2pts)
+
+   a) The title set to your name.
+   
+   b) The "h1" section set to your name.
+   
+   c) An unordered list of 5 things you are interested in. You will need to
+      add more li tags as needed to display 5 items properly.
+
+5. Verify that your web page works by pointing a web browser at your class
+   accounts URL, which is http://cs.indstate.edu/~cs151##/ where ## are the
+   last two digits of your cs151 username.

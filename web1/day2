@@ -1,0 +1,62 @@
+01-19-2017:
+
+  tree <dir>		- Display a indented directory tree.
+    ex: tree ~		- Displays a tree of your home directory.
+
+  cd <dir>		- Change directory
+    ex: cd	- Changes to your home directory
+        cd ~	- Same thing
+        cd ..	- Moves to the parent directory
+        cd /	- Moves to the root file-system directory.
+
+  cp [-r] <src..> <dst>	- Copy files
+    -r = Copy files/directories recursively.
+    -a = Preserve permissions and owners, copy file and directories recursively.
+    ex:
+      cp -r dir1 dir2 ~/dest/	- Recursively copies all of dir1 and dir2 into
+				  the directory ~/dest
+      cp a.txt b.txt		- Copies a.txt as b.txt
+      cp a.txt b.txt c		- Copies text files a and b to directory c.
+
+  mv <src..> <dst>	- Rename / move files, works a lot like cp, but moves
+			  instead of copies (think cut-and-paste instead of
+			  copy and paste)
+    ex: mv a.txt b.txt	- Renames a.txt as b.txt
+        mv a b c	- Moves a and b into directory c.
+
+  rm [-r] <file..>	- Remove file or files
+    -r = Recursively remove files and directories. DANGEROUS.
+    ex: rm a b		- Removes the files a and b.
+        rm -r c		- Completely removes the directory c.
+
+  mkdir [-p] <dir..>	- Make a directory
+    -p = Make parent directories if they don't exist.
+
+  rmdir <dir..>		- Remove empty directory
+
+- Basic Networking and file copying:
+  ssh <user>@<host>     - Secure shell to another computer.
+  scp <src> <dst>       - Copy files using ssh
+    <src> and <dst> can be one of:
+      <path>
+      [<user>@]<hostname>:[<path>]	(relative paths are relative to the home
+					directory of the remote user account)
+    ex: scp a.txt b.txt	 - Copies local files just like cp.
+      scp a.txt sbaker@cs.indstate.edu:
+        - Copies a.txt to the cs server in sbaker's home directory.
+      scp sbaker@cs.indstate.edu:/tmp/x.txt .
+        - Copies /tmp/x.txt on the cs server using sbaker's account to our
+          current working directory.
+
+  sftp <user>@<host>    - Secure FTP client (interactive, like an ftp client)
+  rsync <src> <dst>     - Like scp, but only copies changed files.
+
+- Editors:
+  vi/vim/elvis		- Use 'vimtutor' to learn.
+  emacs / jove <file>	- Emacs based editors.
+  nano/pico <file>	- Includes simple menu at bottom, easy to learn and use.
+  ne <file>		- Another easy to use editor, use <esc> for menu.
+
+  kate <file>		- Edit file graphically
+  komodo <file>		- Like kate, but lets you display HTML in a sub-window
+  atom <file>		- Another graphical editor.

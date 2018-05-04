@@ -1,0 +1,130 @@
+02-28-2017:
+
+Boolean Logic:
+=============
+- Developed by George Boole in the mid 1800's
+
+- In Boolean logic a statement is either true or false.  It cannot be anything
+  else.
+
+- In most cases we will use 0 to represent false and 1 (or any non-zero value)
+  to represent true.
+
+- You can combine Boolean statements together with the fundamental Boolean
+  operations AND, OR, and NOT (and XOR) which will still result in an expression
+  that is either true or false.
+
+Comparison operations:
+---------------------
+- Mathematical comparisons.  Gives a boolean value (true or false) depending
+  on the outcome of the comparison operation.
+
+  Operation:	True when:
+  ---------	---------
+  a < b		- a is less than b
+  a <= b	- a is less than or equal to b
+  a > b		- a is greater than b
+  a >= b	- a is greater than or equal to b
+  a == b	- a is equal to b
+  a != b	- a is not equal to b
+  a === b	- a is equal to b and both are the same type (strict equality)
+  a !== b	- a is not equal to b and both are the same type
+		  (strict inequality)
+
+  1 < 2  is true	2 < 1  is false
+  2 == 3 is false	2 != 3 is true
+
+
+  We can also compare strings in JavaScript.  Strings are compared
+  alphabetically, i.e. "a" comes before "b" and so on. Capital letters come
+  before lower case letters, i.e. "Z" < "a".
+
+  "abb" < "abc"	is true
+  "abc" > "Z" is true
+
+  Numbers are type converted into strings for comparison against other strings,
+  use === or !== to avoid type conversion.
+  "2" <= 2 is true	"3" > 2 is true
+  "2" == 2 is true	"2" === 2 is false
+
+Boolean Operators and Truth Tables:
+----------------------------------
+- A table of all inputs and the resulting output of the operation.  We will use
+  truth tables to describe the Boolean operations:
+
+  NOT	- NOT a is the reverse of a, i.e. true if a is false and false if a is
+	  true.  In JavaScript ! is the Logical NOT operator.   Ex: ! a
+
+  a | !a
+  -------
+  0 |  1
+  1 |  0
+
+  AND	- a AND b is true if and only if both a and b are true.  In JS && is the
+	  Logical AND operator.  Ex: a && b
+
+  a | b | a && b
+  ---------------
+  0 | 0 |   0
+  0 | 1 |   0
+  1 | 0 |   0
+  1 | 1 |   1
+
+  OR	- a OR b is true if either a or b is true.  In JS || is the Logical OR
+	  operator. Ex: a || b
+
+  a | b | a || b
+  --------------
+  0 | 0 |   0
+  0 | 1 |   1
+  1 | 0 |   1
+  1 | 1 |   1
+
+  XOR	- a XOR b is true only if a and b are not the same. Is essentially the
+          != (not equal) operator.
+
+  a | b | x XOR b
+  ---------------
+  0 | 0 |    0
+  0 | 1 |    1
+  1 | 0 |    1
+  1 | 1 |    0
+
+- Operations are combined left to right.  Use () to force the order of
+  evaluation.
+
+  a AND b OR c	->	(a AND b) OR c	!= a AND (b OR c)
+  
+  a | b | c | (a AND b) OR c | a AND (b OR c)
+  -------------------------------------------
+  0 | 0 | 0 |        0       |       0
+  0 | 0 | 1 |        1       |       0
+  0 | 1 | 0 |        0       |       0
+  0 | 1 | 1 |        1       |       0
+  1 | 0 | 0 |        0       |       0
+  1 | 0 | 1 |        1       |       1
+  1 | 1 | 0 |        1       |       1
+  1 | 1 | 1 |        1       |       1
+
+
+ex:
+  (5 < 4) || (4 < 5)	is true
+  (4 < 5) && (3 < 3)	is false
+
+Conditionals:
+------------
+- Sometimes we want to only execute some code given some conditions.  We can
+  do this using a conditional statement.  The most common form of this is the
+  if/else statement:
+
+    if (expression) statement
+  
+  This will only execute "statement" if the expression inside of the ()'s
+  evaluates to "true". "statement" can be a compound statement (statements
+  enclosed in {}'s, like:
+
+    if (expression) {
+      statement1;
+      statement2;
+      etc;
+    }

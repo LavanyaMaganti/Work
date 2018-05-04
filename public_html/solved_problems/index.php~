@@ -1,0 +1,211 @@
+<html>
+
+<head>
+
+<title> Lavanya Maganti</title>
+<meta content="noindex, nofollow" name="robots">
+<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="pdef.css" rel="stylesheet" type="text/css">
+//<link href="table.php" rel="stylesheet">
+
+<script type="text/javascript">
+function formValidation() {
+var id = document.getElementById('id');
+var firstname = document.getElementById('firstname');
+var lastname = document.getElementById('lastname');
+var email = document.getElementById('email');
+var course = document.getElementById('course');
+var state=document.getElementById('state');
+var address=document.getElementById('address');
+var zip=document.getElementById('zip');
+var errorMsg="";
+
+var reg1 = /^[0-9]+$/;
+if (!id.value.match(reg1)) {
+errorMsg+="Invalid Id\n";
+//alert("Invalid ID");
+}
+
+var reg2=/^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+if (!email.value.match(reg2)) {
+errorMsg+="Invalid Email\n";
+//alert("Invalid email")
+}
+
+if (state.value == "Please Choose") {
+errorMsg+="Choose state\n";
+//alert("Choose state")
+}
+
+var reg3 = /^[0-9]+$/;
+if (!zip.value.match(reg3)) {
+errorMsg+="Invalid Zip\n";
+//alert("Invalid Zip")
+}
+//gender();
+
+if(errorMsg!=""){
+	window.alert(errorMsg);
+	} 
+gender();	
+}
+
+function gender()
+{
+	var gender = document.subscribe.radio[0].checked;
+	var gender1 = document.subscribe.radio[1].checked;	
+		if(gender || gender1)
+		{ return true;
+		}
+		else
+		{		//alert("Select your gender")
+			errorMsg = errorMsg + "please select your gender\n"	;
+			return false;
+		}
+}
+
+</script>
+</head>
+
+<body>
+
+<?php
+
+if(isset($_POST['submit']))
+{
+	$servername = "localhost";
+	$username = "root";
+	$password = "Tony7089";
+	$dbname = "student";
+
+	// Create connection
+	 $conn = mysqli_connect('localhost:3306','root','Tony7089');
+	// // Check connection
+	 if (!$conn) {
+	     die("Connection failed: " . mysql_error());
+	     }
+	     print"Connection Established";
+	//
+	//
+	//     mysql_select_db('student');
+	//
+	//     // sql to create table
+	//     $sql = "INSERT INTO STUDENT(FirstName,LastName,Email,Dept) VALUES ('$_POST[firstname]','$_POST[lastname]','$_POST[email]','$_POST[course]')";
+	//
+	//
+	//     if (mysql_query($sql, $conn)) {
+	//         echo "Table MyGuests created successfully";
+	//         } else {
+	//             echo "Error creating table: " . mysqli_error($conn);
+	//             }
+	//
+	//             mysql_close($conn);
+	//             }
+	             ?>
+	
+	
+
+<div class="panel-heading">
+<a href="http://www.indstate.edu/"> <img id="univLogo" src="ISU.png" alt="logo"></a>
+<b><font size=50px>INDIANA STATE UNIVERSITY</font></b>
+<p align="center"> <font color="#2874A6" size=35px><marquee position:absolute><B>  Student Registration Form </B></marquee></font></p>
+
+</div>
+
+<div style="padding-left:10px">
+
+<p id="head"></p>
+<center>
+<form name="form" method="post" action="index.php" onsubmit='return formValidation()'>
+<table>
+<tr>
+<td>
+<label>ID:</label></td>
+<td><input id="id" type='text'>
+<p id="p1"></p>
+</td>
+</tr>
+<tr>
+<td><label>First Name:</label></td>
+<td><input id='firstname' type='text' >
+<p id="p2"></p>
+</td>
+</tr>
+<tr><td>
+<label>Last Name:</label></td>
+<td><input id='lastname' type='text' >
+<p id="p3"></p>
+</td></tr>
+<tr>
+<td><label>Gender:</label></td>
+<td><input name="gender" id="Male" value="Male" type="radio" /> Male<input name="gender" value="Female" value="Female" type="radio" /> Female
+<p id="p4"></p>
+</td></tr>
+
+<tr>
+<td><label>DOB:</label></td>
+<td><input type="date" name="bday">
+<p id="p5"></p>
+</td></tr>
+
+<tr>
+<td><label>Email:</label></td>
+<td><input id='email' type='text'>
+<p id="p6"></p>
+</td>
+
+<tr>
+<td><label>Course:</label></td>
+<td><input id='course' type='text'>
+<p id="p7"></p>
+</td></tr>
+
+<tr>
+<td><label>State:</label></td>
+<td><select id='state' >
+<option>
+Please Choose
+</option>
+<option>
+America
+</option>
+<option>
+Australia
+</option>
+<option>
+Sweden
+</option>
+<option>
+Africa
+</option>
+</select>
+<p id="p8"></p>
+</td></tr>
+
+<tr>
+<td><label>Address:</label></td>
+<td><textarea id='address' rows="2" cols="21"> </textarea>
+<p id="p9"></p>
+</td></tr>
+
+<tr>
+<td><label>Zip Code:</label></td>
+<td><input id='zip' type='text'>
+<p id="p10"></p>
+</td></tr>
+
+<tr>
+<td></td>
+<td><input id='submit' type='submit' value='Submit Form'></td></tr>
+</table>
+</form>
+</center>
+</div>
+
+ <div class="panel-footer">
+ <a class="tagline" href="http://mathcs.indstate.edu">Computer Science</a>
+ <p align="center">Copyright &copy by Lavanya Maganti </p>        
+</div>
+
+</body>
+</html>

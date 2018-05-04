@@ -1,0 +1,62 @@
+02-02-2017:
+
+Syntax for style-sheets (in Backus-Naur Form (BNF)):
+===================================================
+
+<selector> '{' <declarations> '}'
+
+<declaration>
+  | <property-name> ':' <property-value> ';'
+
+Comments begin with /* and end with */ (C-style comments).
+
+Multiple rules with the same selector are grouped together, thus:
+                                         h1 {
+h1 { font-weight: bold }   \               font-weight: bold;
+h1 { font-size: 12px }      |--> becomes:  font-size: 12px;
+h1 { color: red; }         /               color: red;
+                                         }
+
+Property Values:
+===============
+- Numbers (real / integers)
+- Lengths - An <integer> followed by a unit, units are:
+  Absolute length units:
+   'in' - inches (2.54cm)
+   'cm' - centimeters
+   'mm' - millimeters
+   'pt' - 'points' (1pt = 1/72 of an inch)
+   'pc' - 'picas' (1pc = 12pt)
+   'px' - 'pixel units' 1px = 0.75pt = 1/96 inch.
+  Relative units:
+   'em' - The 'font-size' of the relevant font.
+   'ex' - the x-height (often the height of the lowercase 'x') of the relevant
+          font.
+- Percentages: <number> followed by a '%' character.
+- URLs and URIs: url(<string>) where <string> is optionally enclosed in single
+  or double quotes. ex: body { background: url(http://test.com/bg.png) }
+- Colors: A keyword or a numerical RGB specification.
+  Keywords: black, blue, green, etc.
+  RGB: '#'rgb or '#'rrggbb :  where r,g & b are hex digits (0-9A-F) representing
+    the amount of red/green and blue respectively.
+    rgb(<0-255>,<0-255>,<0-255>), rgb(<0-100%>,<0-100%>,<0-100%>),
+    rgba(<0-255>,<0-255>,<0-255>,<0-1>)
+- Strings: characters enclosed in either single (') or double (") quotes.
+  Characters may be escaped with '\'. Strings may span more than one line by
+  escaping the newline.
+
+Selectors:
+=========
+Selector:		Selects:
+*			All elements
+E.<class>		<E> element in the class '<class>'
+E#<id>			<E> with id='<id>'
+E			All <E> elements
+E, F			All <E> and <F> elements
+E F			All <F> elements that are inside of an <E>
+E:link			<E> when <E> is a hyperlink and unvisited.
+E:visited		<E> when <E> is a hyperlink and visited.
+E:hover			<E> on mouse-over
+E:first-child		<E> when <E> is the first child of its parent.
+E:nth-child(n)		Every <E> matching the nth child condition
+			n: An+B, An, B, even, odd

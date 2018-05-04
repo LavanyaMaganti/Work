@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char str[100];
+
+void
+strrev (char *str)
+{
+  char temp;
+    size_t len = strlen (str) - 1;
+      size_t i;
+        size_t k = len;
+        
+          for (i = 0; i < len; i++)
+              {
+                    temp = str[k];
+                          str[k] = str[i];
+                                str[i] = temp;
+                                      k--;
+                                      
+                                            /* As 2 characters are changing place for each cycle of
+                                                     the loop
+                                                              only traverse half the array of characters */
+                                                                    if (k == (len / 2))
+                                                                      {
+                                                                          break;
+                                                                            }
+                                                                                }
+                                                                                /*  int i;
+                                                                                  char temp;
+                                                                                    for(i=0;i<(strlen(str)/2);i++){
+                                                                                         temp = str[i];
+                                                                                              str[i] = str[strlen(str)- i];
+                                                                                                   str[strlen(str)] = temp;
+                                                                                                     }
+                                                                                                       */
+                                                                                                       }
+                                                                                                        
+                                                                                                        int
+                                                                                                        main ()
+                                                                                                        {
+                                                                                                          int s[96];
+                                                                                                            int i, j, mn, x, k;
+                                                                                                              for (k = 0; k < 95; k++)
+                                                                                                                  s[k] = k + 1;
+                                                                                                                    s[90] = 95;
+                                                                                                                      s[46] = 65;
+                                                                                                                        s[95] = 46;
+                                                                                                                          for (j = 0; j < 27; j++)
+                                                                                                                              {
+                                                                                                                                    s[j] = 1;
+                                                                                                                                        }
+                                                                                                                                        
+                                                                                                                                            printf("Enter the digit of no of rotations\n");
+                                                                                                                                              scanf 
+                                                                                                                                              ("%d", 
+                                                                                                                                              &x);
+                                                                                                                                              
+                                                                                                                                                while 
+                                                                                                                                                (x != 
+                                                                                                                                                0)
+                                                                                                                                                    {
+                                                                                                                                                        printf("Enter string\n");
+                                                                                                                                                              scanf ("%s", str);
+                                                                                                                                                                    strrev (str);
+                                                                                                                                                                    //      printf ("%s", str);
+                                                                                                                                                                          for (mn = 0; mn < x; mn++)
+                                                                                                                                                                            {
+                                                                                                                                                                                for (i = 0; i < strlen (str); i++)
+                                                                                                                                                                                      {
+                                                                                                                                                                                              str[i] = s[(int) str[i]];
+                                                                                                                                                                                              //        printf("%c",str[i]);
+                                                                                                                                                                                                    }
+                                                                                                                                                                                                      }
+                                                                                                                                                                                                            printf ("%s", str);
+                                                                                                                                                                                                                  printf("\n Re-enter the no of rotations\n");
+                                                                                                                                                                                                                        scanf ("%d", &x);
+                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                            
+                                                                                                                                                                                                                              return 0;
+                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                              
+                                                                                                                                                                                                                              

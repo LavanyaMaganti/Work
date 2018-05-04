@@ -1,0 +1,74 @@
+<html>
+<title> sac -ah unix command </title>
+<style> 
+
+   table {
+border-collapse:collapse;
+font-size: 115%;
+   }
+
+tr:nth-child(even) {
+background : #D3D3D3;
+}
+
+tr:first-child {
+background : #D3D3D3;
+}
+
+td:last-child {
+background: #D3D3D3;
+}
+
+meter {
+  width: 100%;
+}
+
+
+</style>
+<script>
+function max(){
+
+
+}
+</script>
+<body>
+<table>
+<col width='50'>
+<col width='50'>
+<col width='300'>
+<?php
+$op = `sac -ah`;
+$keywords = explode("\n", $op);
+//$keywords = preg_split('/(?=[0-9][0-9]-:*)/i', $op);
+$count =0;
+ foreach ($keywords as $value) {
+   if($count <2)
+    {
+//      $key = preg_split('/(Average)/', $value);
+  //      foreach($key as $value) {
+//          if($count == 1)
+  //        {
+    //        echo "<tr> <td colspan='3'>Average $value</td></tr>";
+      //    }
+        //  else
+           echo "<tr> <td colspan='3'>$value</td></tr>";
+        $count = $count +1;
+  //      }
+    }
+  else
+  {
+      $key2 = preg_split('/\s+/', $value);
+      echo "<td>$key2[0]</td>";
+      echo "<td align='right' >$key2[1]</td>";
+       $m = 63;
+     echo "<td><meter max='$m' value=".strlen($key2[2])."></meter></td>";
+}
+//      echo"<td class='col-width'><meter min='0' max='$m' low='25' high='75' optimum='50' value=".strlen($key2[2])."></meter></td>"
+//echo "<td> <meter min='0' max='100' low='25' high='75' optimum='100' value='80'></meter></td>";
+      echo "</tr>";
+
+ }
+ ?>
+</table>
+</body>
+</html>

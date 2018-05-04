@@ -1,0 +1,2 @@
+  outerwall = gluNewQuadric();
+  gluQuadricDrawStyle(outerwall, GLU_FILL);

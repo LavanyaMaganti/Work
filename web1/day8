@@ -1,0 +1,40 @@
+02-09-2017:
+
+- Test #1 - Tuesday and Wednesday.
+
+Fonts:
+-----
+font-family - Prioritized list of font families or generic-family names.
+  Values: [[ <family-name> | <generic-family> ] [,<family-name>|
+   <generic-family>]* ] | inherit
+family-names: 'Arial', 'Helvetica', etc.
+generic-family: serif | sans-serif | cursive | fantasy | monospace
+
+  - Serif's are the little points on the edges of characters (Like times).
+  - Sans-serif are sans the serif - blunt edges like Arial.
+  - Monospace are fixed-width character fonts (often called console fonts)
+
+font-style - Selects between normal, italic or oblique font faces.
+  Values: normal | italic | oblique | inherit
+
+  - An italic font is a cursive font, often having a different, more cursive
+    form than regular glyphs
+  - An oblique font is a regular font that has been slanted to the right and
+    will appear much like an italic font.
+
+font-weight - Select the weight of the font.
+  Values: normal | bold | bolder | lighter | 100 - 900 (in 100 increments)
+    | inherit
+  normal = 400, bold = 700
+
+font-size - Sets the font-size corresponding to the em square.
+  Values: <absolute-size> | <relative-size> | <length> | <percentage> | inherit
+
+  absolute-size=[ xx-small, x-small, small, medium, large, x-large, xx-large ]
+  relative-size=[ larger, smaller, <size> ]
+
+font - shorthand
+  Values: [ [ <'font-style'> || <'font-variant'> || <'font-weight'> ]?
+    <'font-size'> [ / <'line-height'> ]? <'font-family'> ] | caption | icon
+    | menu | message-box | small-caption | status-bar | inherit
+

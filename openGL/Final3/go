@@ -1,0 +1,5 @@
+for x in *.c
+do
+  sed 's/NMON/NUSERS/g' $x > ttt
+  mv ttt $x
+done

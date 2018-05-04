@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Label </title>
+<meta charset='utf-8'>
+
+<style>
+
+</style>
+</head>
+
+<body>
+<table>
+<tbody>
+
+<tr align="left"> <th> Nutrition Facts </th> </tr>
+<tr> <td> Serving Size 2tbsp (37g) unpopped </td> </tr> 
+<tr> <!--align="right"--> <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (makes about 6 cups popped) </td> </tr> 
+<tr> <td> Servings Per Bag: about 2.5 </td> </tr>
+<tr> <td> Servings Per Carton: about 25 </td> </tr>
+
+<tr colspan="3"> 
+     <th align="left"> <b> Amount per serving </b> </th>
+     <th> <b> 2 Tbsp Unpopped </b> </th>
+     <th> <b> 1 cup popped  </b> </th>
+</tr>
+  
+
+</tbody>
+</table>
+</body>
+</html>

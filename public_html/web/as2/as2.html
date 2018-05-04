@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> hw2 </title>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <form method="POST" action="as2.php">
+    <h2> Assignment#2 </h2>
+    <table>
+    <tbody>
+    <tr>
+    <td> </td>
+    <td> <b>New member form </b> </td>
+    </tr>
+    <tr>
+    <td align='right'> Sender: <td align='left'><input type="text" placeholder="Real name" name="Sender" required>
+    <tr><td align='right'> Major: <td align='left'><input type="text" name="Major" placeholder="Your major">
+    <tr><td align='right'> Year:
+    <td align='left'>
+     <select name="Year">
+      <option value="Freshman" name="Freshman">Freshman</option>
+      <option value="Sophomore" name="Sophomore">Sophomore</option>
+      <option value="Junior" name="junior" >Junior</option>
+      <option value="Senior" name="Senior">Senior</option>
+     </select>
+    <tr><td align='right'> Going on to <br> grad <br>school? <td align='left'><input type="radio" name="GS" value="Yes"> Yes 
+                                                                     <input type="radio" name="GS" value="No"> No
+                                                                     <input type="radio" name="GS" value="May be"> May be
+    <tr><td align='right'> Above 3.5<br> GPA? <td align='left'><input type='checkbox' name="GPA" value="Yes">
+    <tr><td align='right'> Telephone: <td align='left'><input type="telephone" name="Telephone" pattern='\([0-9]{3}\) [0-9]{3}-[0-9]{4}'  placeholder='(xxx) xxx-xxxx'>
+    <tr><td align='right'> Email: <td align='left'><input type="text" name="Email" size=90 placeholder="someone@host" required>
+    <tr><td align='right'> Message: <td align='left'><textarea name="Message" rows=8 cols=55></textarea>
+    <tr><td><td><button type="submit">Submit</button> 
+    <button type="reset">Reset</button>
+    </tbody> 
+    </table>
+    </form>
+</body>
+</html>

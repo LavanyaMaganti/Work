@@ -1,0 +1,41 @@
+02-23-2017:
+
+Expressions:
+===========
+- An expression is any mathematical expression that evaluates to some value, the
+  result of which may be assigned to a variable or just used directly.
+  ex: 1+2, 3-4
+- The Mathematical Operators are:
+  +	Addition, adds two numbers or concatenates two strings together.
+	ex:
+	 1+2 -> 3
+	 "a" + "b" -> "ab"
+	If either side is a string, then both sides are considered strings,
+	therefore numbers are converted into strings, then added to the other
+	string:
+	"a" + 5  -> "a5"
+	5 + "5"  -> "55"
+
+  -	Subtraction: a-b = subtraction of b from a.
+  *	Multiply: a*b = multiplies a by b
+  /	Divide: a/b = divides a by b
+  %	Modulus: Remainder from integer division: a%b = remainder from a/b
+
+  Incrementing and decrementing a numeric value by one happens so often in
+  programming there is a special operation for it.
+
+  ++	Increment a variable by one.
+  --	decrement a variable by one.
+
+  The ++ and -- operations must be associated with a variable:
+  var a = 10;	// a is assigned the value 10.
+  a++;		// Increments a by one, a now is 11.
+  ++a;		// Also increments a by one, a is now 12.
+
+  There is a difference in which side of the variable we use ++/-- on if we want
+  the value of the variable.
+
+  var x = ++a;	// Pre-increment: a is incremented, then the new value is given
+		// to x.
+  var x = a++;	// The value of a is given to x first, then a is incremented.
+

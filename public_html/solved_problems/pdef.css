@@ -1,0 +1,177 @@
+body
+{
+background - color:#ffffff;
+}
+
+h1
+{
+background:#D6E8F8;
+color:white;
+font-size:15 px;
+}
+
+.panel-heading
+{
+background:#D6E8F8;
+color:#0000ff;
+overflow:hidden;
+}
+
+.logo
+{
+height:0 px;
+float:center;
+} 
+
+.tagline
+{
+padding-top:20 px;
+text-decoration:underline;
+font-size = 15 px;
+color:#fff;
+} 
+
+#form_layout{
+width:300 px;
+float:left;
+border-radius:10 px;
+font-family:raleway;
+border:2 px solid #ccc;
+padding:10 px 40 px 25 px;
+margin-top:-2 px;
+} 
+
+p
+{
+font-size:12 px;
+color:red;
+} 
+
+.error
+{
+color:red;
+font-style:italic;
+font-size:10 px;
+} 
+
+input[type=submit]
+{
+width:50 %;
+color:black;
+border:#000000;
+font-size:20 px;
+cursor:pointer;
+margin-bottom:15 px;
+border-style:solid;
+border-width:3 px;
+} 
+
+input[type=text]
+{
+width:75 %;
+color:black;
+border:#000000;
+font-size:20 px;
+cursor:pointer;
+border-style:solid;
+border-width:1 px;
+} 
+
+select
+{
+width:75 %;
+color:black;
+border:#000000;
+font-size:20 px;
+cursor:pointer;
+border-style:solid;
+border-width:1 px;
+} 
+
+textarea
+{
+width:75 %;
+color:black;
+border:#000000;
+font-size:20 px;
+cursor:pointer;
+border-style:solid;
+border-width:1 px;
+} 
+
+#nav{
+width:100 %;
+float:center;
+height:100 px;
+font-size:10 px;
+} 
+
+#nav_wrapper{
+height:70 px;
+width:600 px;
+background:#2d3642;
+margin-left:auto;
+margin-right:auto;
+margin-top:100 px;
+} 
+
+#nav_wrapper ul li{
+list-style:none;
+display:inline;
+font-weight:bold;
+padding:5 px;
+} 
+
+#nav_wrapper a{
+color:white;
+font-size:35 px;
+text-decoration:none;
+padding:10 px;
+} 
+
+#nav_wrapper ul 
+li:hover
+{
+background:#fffff;
+color:black;
+transition:all 2.0 s;
+font-size:150 %;
+} 
+
+#nav_wrapper ul li:hover ul{
+display:block;
+} 
+
+#nav_wrapper ul ul{
+display:none;
+position:absolute;
+} 
+
+#nav_wrapper ul ul li {
+display:block;
+} 
+
+.left
+{
+float:left;
+}
+
+.right
+{
+float:right;
+} 
+
+.panel-footer
+{
+background:#2d3642;
+color:#fff;
+text-shadow:0 1 px 1 px rgba (0, 0, 0, 0.1);
+overflow: hidden 
+ bottom:auto;
+} 
+
+table#tb1 
+{
+width:100%; 
+background-color:#f1f1c1;
+}

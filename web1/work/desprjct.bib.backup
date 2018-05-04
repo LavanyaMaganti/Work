@@ -1,0 +1,28 @@
+@article{Intro,
+	author    = "Smart",
+	title     = "A really nice project"
+	year      = "2017"
+	howpublished = {\url{ http://cryptowiki.net/index.php?title=Classical_cryptography:_experience_and_lessons }},
+}
+
+@article{His,
+	author = "Russell, Stuart J. and Norvig, Peter",
+	title = "Artificial Intelligence: A Modern Approach",
+	year = "2003",
+	howpublished = {\url{ https://kl2217.wordpress.com/2010/11/23/cipher-types/}},,
+	
+}
+
+@article{back,
+	author    = "Smart",
+	title     = "A really nice project"
+	year      = "2017"
+	howpublished = {\url{ http:https://www.mathsisfun.com/combinatorics/combinations-permutations.html}},
+}
+
+@article{back2,
+	author    = "Smart",
+	title     = "A really nice project"
+	year      = "2017"
+	howpublished = {\url{ http://www.xcprod.com/titan/XCSB-DOC/binary_xor.html}},
+}

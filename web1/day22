@@ -1,0 +1,25 @@
+04-06-2017
+
+examples:
+  for(var i=0; i < 10; i++) {
+    console.log(i);
+  }
+    - print 0 to 9.
+  
+---
+  for(i=10; i >= 0; i--) console.log(i);
+    - print 10 down to 0.
+  
+---
+  for(i=start; i < end; i+=skip) console.log(i);
+    - print from 'start' to 'end', skipping 'skip' steps after each output.
+
+---
+  function binary(n) {
+    var b = [];
+    for (var i = 0; n > 0; i++) {
+      b[i] = n % 2;
+      n = Math.floor(n / 2);
+    }
+    return b.reverse().join("");
+  }

@@ -1,0 +1,20 @@
+CS151 Lab makeup exercise #1 (10 pts)
+
+The following are to be done in your CS151 class account.  Use the "man" command
+for more information on specific commands.  You may need to use the following
+commands: cd, ls, cp, mkdir, more or less, and an editor of some kind.
+
+NOTE: To check your progress run the "labcheck x1" command to check for errors
+and to see if you've successfully completed the lab.
+
+--------------------------------------------------------------------------------
+
+Make a directory called labx1 in your CS151 accounts' home directory.  Inside
+this directory do the following:
+
+1) Copy the .js files from the directory ~sbaker/public_html/cs151/class/x1/
+   to your labx1 directory.  Make each of them executable as node programs.
+   (1 pt)
+
+2) Edit the files f1.js through f4.js and complete the instructions found in
+   each. (1pts each)

@@ -1,0 +1,35 @@
+<html>
+<head>
+<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="default.css" rel="stylesheet" type="text/css">
+<title> Lavanya Maganti </title>
+
+<script>
+
+</script>
+
+</head>
+
+<body>
+
+             <div class="panel-heading" class="hover">
+                                     <a href="http://www.indstate.edu/"> <img id="univLogo" src="https://cs.indstate.edu/~ndasari/images/logo.png" 
+                                     alt="logo"></a>
+                                                             <a class="tagline" href="http://mathcs.indstate.edu">Computer Science</a>
+                                                             
+                                                                             </div>
+                                                                             <div id="nav"><br>
+                                                                               <div id="nav_wrapper"><br>
+                                                                                   <ul>
+                                                                                       <li><a href="#"> About</a></li>
+                                                                                           <li><a href="#"> Contact </a></li>
+                                                                                               <li><a href="#"> Work </a></li>
+                                                                                                   <li><a href="index1.html"> Project </a></li>
+                                                                                                   
+                                                                                                       </ul>
+                                                                                                         </div>
+                                                                                                         
+                                                                                                         </div>
+                                                                                                             </body>
+                                                                                                             </html>
+                                                                                                             

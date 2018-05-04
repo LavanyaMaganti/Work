@@ -1,0 +1,129 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include<ctype.h>
+
+#define MAX_LEN 50
+void line_number(char );
+void word_number(char );
+void char_number(char );
+  FILE *fd;
+int main (int argc, char *argv[])
+{
+  if (argc < 2)
+    {
+      printf ("Expexted file name\n");
+      exit (0);
+    }
+  fd=fopen(argv[1],"r");
+  if (fd == 0)
+    {
+      printf ("Couldnot open file\n");
+    }
+
+  else
+    {
+    
+    int lno=0,ch=0;
+    char l,c;
+    char line[MAX_LEN];
+          while (l = (fgets (line, MAX_LEN, fd) != NULL))
+            {
+            //    printf ("line: %s", line);
+                lno++;
+    str = strtok (statement, " .,!-");
+                  wno = 0;
+                                    while (str != NULL)
+                                                            {
+                                                                                            wno++;
+                                                                                                                                }
+                                                                                                                                                                    printf("wrdno: %d",wno);
+                                                                                                                                                                                                                str = strtok (0, " .?,!-");
+                                                                                                                                                                                                                
+                  }
+                    printf("lineno:%d\n",lno);
+  fd=fopen(argv[1],"r");
+  
+          while ((c = fgetc(fd)) != EOF)
+            {
+//                printf ("char %c\n", c);
+                     ch++;
+                       }
+                         printf("charno %d\n",ch);
+                                           
+//line_number(argv[1]);
+//word_number(argv[1]);
+//char_number(fd);
+  fd=fopen(argv[1],"r");
+/*
+while (l = (fgets (line, MAX_LEN, fd) != NULL))
+  {
+      printf ("line: %s", line);
+          str = strtok (statement, " .,!-");
+              wno = 0;
+                  while (str != NULL)
+                        {
+                                wno++;
+                                    }
+                                    printf("wrdno: %d",wno);
+                                            str = strtok (0, " .?,!-");
+                                            
+                                                  }
+  */                                                
+printf("%s",argv[1]);
+}
+fclose(fd);
+}
+/*
+void line_number(char argv[1])
+{
+  fd=fopen(argv[1],"r");
+
+int lno=0,ch=0;
+char l,c;
+char line[MAX_LEN];
+      while (l = (fgets (line, MAX_LEN, fd) != NULL))
+	{
+//	  printf ("line: %s", line);
+	  lno++;
+	}
+	printf("lineno:%d\n",lno);
+}
+
+void char_number(char argv[1])
+{
+  fd=fopen(argv[1],"r");
+
+ int ch=0;
+ char c;
+      while ((c = fgetc(fd)) != EOF)
+	{
+	  printf ("char %c\n", c);
+	   ch++;
+	}
+	printf("charno %d\n",ch);
+
+}
+/* 
+void word_number(char *file)
+{
+char l;
+int wno=0;
+     while (l = (fgets (line, MAX_LEN, fd) != NULL))
+	{
+	  printf ("line: %s", line);
+	  str = strtok (statement, " .,!-");
+	  wno = 0;
+	  while (str != NULL)
+	    {
+	      wno++;
+		}
+printf("wrdno: %d",wno);
+	      str = strtok (0, " .?,!-");
+
+	    }
+
+
+	}
+
+    }*/

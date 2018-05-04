@@ -1,0 +1,42 @@
+lab exercise #11:
+l1.js:
+l2.js:
+l3.js:
+l4.js:
+l5.js:
+l6.js:
+l7.js:
+-0.5 output of program (l7.js) is not correct for input '/u1/h7/sbaker/bin/check/data/text/text.1':
+------ Yours: ------
+# of dots and dashes = 5
+---- Reference: ----
+# of dots and dashes = 12
+--------------------
+l8.js:
+l9.js:
+l10.js:
+l11.js:
+l12.js:
+-1.0 output of program (l12.js) is not correct for input '20':
+------ Yours: ------
+---- Reference: ----
+# primes <= 20 is 8
+--------------------
+
+ function isprime(n) {
+   var sq=Math.sqrt(n)+1;
+   for(var i=0; i < primes.length; i++) {
+     if (primes[i] > sq) break;
+     if (n % primes[i] == 0) return false;
+   }
+   return true;
+ }
+
+l13.js:
+-1.0 Incomplete.
+l14.js:
+-1.0 Incomplete.
+l15.js:
+-1.0 Incomplete.
+
+5.50 out of 10 Points.

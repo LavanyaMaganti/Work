@@ -1,0 +1,51 @@
+The following are to be done in your CS151 class account.  Use the "man" command
+for more information on specific commands.  You may need to use the following
+New concept: I/O redirection.  Using the > character followed by a file-name,
+we can redirect the output of a command into that file. i.e.:
+  The output of the ls command above would be written to the file output
+the file.  Use >> file to append to the file rather than over-writing what is
+already there. Conversely we can use the < character to read data from a file
+into the input of a command, i.e.:
+would read the file output as the input to more.  This would be like doing:
+except we're using a file to store the output of ls.  You will need to use
+redirection for some of the problems below.
+Grep is used to search for strings in a file.  These strings may be in the form
+matching of files, but for text.  ^ at the beginning indicates that the string
+we're looking for must start at the beginning of the line, so:
+would search for 'test' at the beginning of a line in the file 'file.txt', but
+ignore it if occurs elsewhere in the line.
+You may check your work using the 'labcheck h1' command at your shell prompt to
+tell you when you have completed the assignment, it is merely a tool to help you
+this directory perform the following:
+2) Set the permissions on all the 6 directories such that there are no group
+   permissions, other permissions are read and search only and user has full
+3) Using the grep command, search for and use re-direction to store the output
+   in the following (5 pts):
+   a) Search for the words in /usr/dict/words that contain the sequence 'gho'
+      and store the results in 'a/gho.txt' (1 pt)
+   b) Search for words in /usr/dict/words beginning with 'ult' and store the
+      results in the file 'b/ult.txt'.  Hint:  The ^ character at the
+      beginning of a pattern represents the beginning of a line. (1pt)
+   c) Search for lines in /etc/hosts that contain '57' and save the output
+      in the file 'c/hosts.txt'. (1pt)
+   d) Search for the hosts in /etc/hosts that start with 10.0.14 and store
+      the results 'd/localnet.txt'. (1pt)
+   e) Search for the hosts in 'd/localnet.txt' that contain 'u1' and store
+      the results in 'e/u1.txt'. (1pt)
+4) Perform the following (1/2pt each / 1.5 pts):
+  a) Copy the file 'a/gho.txt' to b/.
+  b) Copy the file 'd/localnet.txt' to c/.
+  c) Copy the file 'e/u1.txt' to d/.
+5) Use the 'ln' command to make the following "symbolic links" (1/2 pt each):
+  a) Target the file 'gho.txt' in a with a link name called 'words.txt' in
+     the h1 directory.
+  b) Target the file 'localnet.txt' in d with a link name called 'local.txt' in
+     the h1 directory.
+  c) Target the file 'hosts.txt' in c with a link name called 'hosts.txt'
+     in the h1 directory.
+6) Use the cat command to do the following (1/2 pt each):
+  a) Concatenate the two files in c ('hosts.txt' and 'localnet.txt') into the
+     file 'c/local'.  Make sure that the data in hosts.txt goes first.
+  b) Concatenate 'gho.txt' and 'ult.txt' in the b directory together
+     into the file 'words.txt' in the same directory and in that order.
+The tree view of h1 (using the 'tree h1' command) should look like this:

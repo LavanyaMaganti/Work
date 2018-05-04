@@ -1,0 +1,63 @@
+03-23-2017
+
+Loops
+=====
+- Loops are the repeated execution of some segment of code for as long as a
+  specific condition remains true.
+
+- The simplest form of loop is the "while" loop, which executes it's statement
+  for as long as its expression remains true:
+
+  while (<expression>) <statement>
+
+examples:
+  while (true) console.log("Print forever");
+   - This loop will never stop, since the expression is always true.
+  
+  var i=0;
+  while (i < 10) console.log(i++);
+   - Prints 0 through 9. Remember that 'i++' gives it's value before
+     incrementing.  When i becomes 10, the expression is no longer true, so the
+     execution moves on to the statements that follow the while loop.
+
+  var i = 0;
+  while (i < 10) {
+    console.log(i);
+    i = i + 1;
+  }
+  - The same as the previous but using a compound statement and moving the
+    increment of i outside of the console.log() function.
+
+  // A function to find the length of a string (don't use this, use s.length
+  // instead:
+  function strlen(s) {
+    var i = 0;
+    // As long as the character at index i is not undefined, keep incrementing
+    // the index.  When this stops the index i will be equal to the length of
+    // the string.
+    while (s[i] != undefined) i++;
+    return i;
+  }
+
+- An upside-down variant of while is the do-while loop:
+
+  do
+    <statement>
+  while (<expression>);
+
+  - This loop will execute <statement> at least once, since it done before
+    the expression in the while part is tested.  If the expression is true
+    it will go back to the top and do the <statement> again.   For clarity
+    purposes <statement> should always be a compound statement:
+
+  do {
+    console.log("Print once");
+  } while (false);
+   - Still prints once, even though expression can never be true.
+
+  var i = 0;
+  do {
+    console.log(i++);
+  } while (i < 10);
+    - Still prints 0 - 9.
+

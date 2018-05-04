@@ -1,0 +1,2 @@
+  gluCylinder(outerwall, 10.0, 10.0, 0.2, 48, 6);
+  gluCylinder(outerwall, 5.0, 5.0, 0.2, 48, 6);

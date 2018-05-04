@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+<title> Categories </title>
+<meta charset='utf-8'>
+<style>
+
+body
+{
+background-color:white;
+background-repeat:no-repeat;
+background-size:cover;
+}
+.sec {
+background-color:black;
+margin:0px;
+padding:20px 10px 30px 30px;
+border:2px solid black;
+width:1400px;
+    }
+    
+.login
+{
+ margin: 30px 0px 0px 600px;
+ padding:0px;
+ color: #00FFFF;
+}
+.login:hover 
+{
+ color: pink;
+}
+.sign
+{
+ margin: 30px 550px 0px 0px;
+ padding:0px;
+ color: #00FFFF;
+}
+.sign:hover 
+{
+ color: pink;
+}
+#search
+{
+ background-image: url('searchicon.png');
+ background-position: 10px 10px; 
+ background-repeat: no-repeat;
+ padding: 12px 20px 12px 40px;
+ margin:0px 0px 0px 850px;
+ width: 140px;
+ box-sizing: border-box;
+ border: 2px solid #ccc;
+ border-radius: 4px;
+ font-size: 16px;
+ background-color: white;
+ -webkit-transition: width 0.4s ease-in-out;
+ transition: width 0.4s ease-in-out;
+}
+
+#search:focus {
+  width:20%;
+}
+.men {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  margin:0px 0px 0px 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+ }
+.drop {
+  position: relative;
+  display: inline-block;
+  float:left;
+ }
+.content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ }
+.content a {
+ color: black;
+ padding:6px 40px 6px 6px;
+ text-decoration: none;
+ display: inline-block;
+ }
+.content a:hover {background-color: black}
+    
+.drop:hover .content {
+ display: block;
+ }
+.drop:hover .men {
+ background-color: #00FFFF;
+ }
+a:hover
+ {
+ color:white;
+ } 
+
+</style>
+</head>
+
+<body>
+<section class="sec">
+<table class="sec">
+
+<h2>
+<span class="spacer">&nbsp;</span>
+<a href="login.html" class="login"> Login</a>
+<a href="signup.html" class="sign"> Sign up</a>
+<input type="text" name="search" id="search" placeholder="search.." align="right" width="50px" height="30px">
+
+<!--<i class="fa search"></i>-->
+
+<div class="drop">
+ <button class="men">Men</button>
+ <div class="content">
+ <a href="#">Shirts</a>
+ <a href="#">Bottoms</a>
+ <a href="#">Watches</a>
+ </div>
+</div>
+<div class="drop">
+ <button class="men">Women</button>
+ <div class="content">
+ <a href="#">Tops</a>
+ <a href="#">Kurtis</a>
+ <a href="#">Jeans</a>
+ <a href="#">Accesories</a>
+</div>
+</div>
+</table>
+</section>  
+<script>
+
+</script>
+
+</body>
+</html>

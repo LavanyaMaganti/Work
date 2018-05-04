@@ -1,0 +1,76 @@
+02-07-2017:
+
+- Test: 02/17 & 02/18
+
+Box model:
+---------
+
++--------------------------
+|   Margin
+|  +=======================
+|  +  Border
+|  +  +--------------------
+|  +  |  Padding
+|  +  |  +-------------+
+|  +  |  |             |
+|  +  |  |  Content    |
+|  +  |  |             |
+|  +  |  +-------------+
+|  +  |
+...
+
+* = (top | right | bottom | left )
+{1-4} = 1 to 4 parameters: <All> | <TB> <RL> | <T> <RL> <B> | <T> <R> <B> <L>
+
+Margin:
+ margin-*,  margin {1-4}
+ Value: <size>
+
+Padding:
+ padding-*, padding {1-4}
+ Value: <size>
+
+Border width:
+ border-*-width, border-width {1-4}
+ Value: 'thin' | 'medium' | 'thick' | <length>
+
+Border color:
+ border-*-color, border-color {1-4}
+ Value: <color> | 'transparent'
+
+Border-style:
+ border-*-style, border-style {1-4}
+ Value: 'none' | 'hidden' | 'dotted' | 'dashed' | 'solid' | 'double'
+        'groove' | 'ridge' | 'inset' | 'outset'
+
+Border-shorthand:
+ border-*, border {1-4}
+ Values: [ <border-width> || <border-style> || <border-color> ]
+
+width, min-width, max-width - width of content box
+ Values: <length> | <percentage> | 'auto' | 'inherit'
+
+height, min-height, max-height - height of content box
+ Values:  <length> | <percentage> | 'auto' | 'inherit'
+
+Colors and Backgrounds:
+----------------------
+color - Sets the foreground color property
+ Values: <color>
+
+background-color - Sets the background color
+ Values: <color> | 'transparent'
+
+Tables:
+------
+border-collapse - Sets the tables border model
+  Values: collapse | separate |inherit
+
+border-spacing - Sets the tables border spacing in the seperated borders model.
+  Values: <length> <length>? | inherit
+   1 length = horizontal and vertical spacing
+   2 lengths = 1st horizontal then vertical spacing
+
+empty-cells - Controls borders around empty table cells
+  Values: show | hide | inherit
+

@@ -1,0 +1,431 @@
+\documentclass{beamer}
+\usepackage[latin1]{inputenc}
+\usepackage{amssymb,amsmath,amsthm,stmaryrd}
+\usepackage{algorithm}
+%\usepackage{algorithmicx}
+%\usepackage[noend]{algpseudocode}
+\usepackage{default}
+
+\usetheme{Warsaw}
+
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+%\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+%\algrenewcommand\algorithmicensure{\textbf{Output:}}
+%\algrenewcommand\algorithmicelse{\textbf{else }}
+
+\def\MyTitle#1{{\color{green}{\it  #1}\\ }}
+
+%\def\MYTITLE#1{{\color{Hcolor}{\huge #1}\\\rule[.15in]{\textwidth}{.03in} }}
+\def\mytitle#1{{ \color{blue}{\large #1}\\}}
+
+%\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\title{\textbf{Recursive Function Reminder}}
+
+\author{Arash Rafiey }
+\date{August 25, 2016}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+\titlepage
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{ \frametitle{ All subsets of a set of size $n$} 
+
+$\#$ include $<iostream>$
+
+using namespace std;
+
+void Allsubset( int *Array, int i, int n) $\{$ \\
+
+        if (i==n) $\{$ \\
+
+         \hspace{2mm}       cout$<<''new \ \ subset= ''$; \\
+
+        \hspace{2mm}        for (int j=0; $j <n$; j++) \\
+         \hspace{4mm}         if (Array[j] ==1) \\
+          \hspace{6mm}              cout$<<j+1<<'',''$;
+
+
+           \hspace{2mm}     cout$<<endl$; \\
+            \hspace{2mm}    return; \\
+         $\}$
+
+\vspace{2mm}
+        
+        Array[i]=0; \\
+        Allsubset(Array,i+1,n); \\
+
+        Array[i]=1;\\
+        Allsubset(Array,i+1,n);
+
+ $\}$
+
+}
+
+\frame{ 
+
+ The Needleman Wunsch algorithm is an algorithm used in bioinformatics to align protein or nucleotide sequences. 
+ 
+ \vspace{3mm}
+ 
+ \pause 
+ 
+ 
+ It was one of the first applications of dynamic programming to compare biological sequences. 
+ 
+ \vspace{3mm}
+ 
+ \pause 
+ 
+ The algorithm was developed by Saul B. Needleman and Christian D. Wunsch and published in 1970.
+
+ 
+ 
+}
+
+
+\frame{ 
+
+
+ \begin{center}
+ \colorbox{white}{\includegraphics[width=0.7\hsize]{./pryinaka.pdf}}
+ \end{center}
+ 
+ 
+
+}
+
+\frame{
+
+int main() $\{$
+
+cout$<<''hello''<<endl$;
+
+int n;
+
+cout$<<''enter \ \ a \ \ number ''$;
+
+$cin >> n$;
+
+int *Array=new int [n];
+
+Allsubset(Array,0,n);
+
+cout $<<''to \ \ exit \ \ enter \ \ a \ \ number ''$;
+
+int t; 
+
+$cin>> t$;
+
+$\}$
+
+}
+
+\frame{  \frametitle{all $m$-subsets of an $n$-set}
+
+$\#$ include $<iostream>$
+
+using namespace std;
+
+void msubset(int *Array, int i, int n, int m) $\{$ \\
+
+	if (m==0) $\{$ \\
+
+         \hspace{2mm}       cout$<<''new  \  \ subset= ''$; \\
+
+        \hspace{2mm}        for (int j=0; $j < i$; j++) \\
+         \hspace{4mm}         if (Array[j] ==1) \\
+          \hspace{6mm}              cout$<<j+1<<'',''$;
+
+
+           \hspace{2mm}     cout$<<endl$; \\
+            \hspace{2mm}    return; \\
+        $\}$
+
+
+    
+        if ( $i > n-m$) return; // not enough ones is Array
+        
+\vspace{2mm}
+        
+        Array[i]=1; \\
+        msubset(Array,i+1,n,m-1); \\
+
+        Array[i]=0;\\
+        msubset(Array,i+1,n,m);
+
+         $\}$
+
+}
+
+\frame {
+
+int main() $\{$
+
+cout$<<''hello''<<endl$;
+
+int n;
+
+cout$<<''enter \ \ a \ \ number \ \ for \ \  array \ \ size ''$;
+
+$cin >> n$;
+
+int *Array=new int [n];
+
+int m;
+
+cout$<<"enter \ \  a  \ \ number \ \  for  \  \  subset \ \ size "$;
+
+cin $>>$ m;
+
+if ($m < n$)
+       
+   \hspace{2mm}   msubset(Array,0,n,m); 
+ 
+
+ else
+        cout$<<"error "<<endl$;
+
+cout$<<endl$;
+
+cout $<<''to \ \ exit \ \ enter \ \ a \ \ number ''$;
+
+int t; 
+
+$cin>> t$;
+
+$\}$
+
+}
+
+\frame{  \frametitle{permutations of $n$ numbers }
+
+% $\#$ include $<iostream>$
+% 
+% using namespace std;
+
+void permute(int *Array,int i, int n) $\{$ \\
+
+        if (i==n) $\{$ \\
+                
+              \hspace{2mm}  cout$<<''new  \  \ permutation= ''$; \\
+
+              \hspace{2mm}        for (int j=0; $j <n$; j++) \\
+        
+	      \hspace{4mm}              cout$<<Array[j]<<'',''$;
+
+
+           \hspace{2mm}     cout$<<endl$; \\
+            \hspace{2mm}    return; \\
+        $\}$
+                
+               
+        
+        else $\{$ \\ 
+        
+        \hspace{2mm}  int temp; int t;
+
+       \hspace{2mm}  for (t=i; $t< n$; t++) $\{$ \\
+        
+        
+          \hspace{4mm}   // exchange Array[i],Array[t]  
+          
+             \hspace{4mm}     temp=Array[i];  \hspace{2mm} Array[i]=Array[t];  \hspace{2mm}  Array[t]=temp;
+                  
+             
+             \hspace{4mm}  permute(Array,i+1,n);
+
+             \hspace{4mm}  // exchange back Array[t],Array[i] 
+             
+               \hspace{4mm}   temp=Array[i];   \hspace{2mm} Array[i]=Array[t]; \hspace{2mm} Array[t]=temp; 
+                 
+            \hspace{2mm}  $\}$    
+        $\}$
+ $\}$   
+
+ 
+}
+
+\frame {
+
+int main() $\{$
+
+cout$<<''hello''<<endl$;
+
+int n;
+
+cout$<<''enter \ \ a \ \ number \ \ for \ \  array \ \ size ''$;
+
+$cin >> n$;
+
+int *Array=new int [n];
+
+int j;
+
+for (j=0; $j < n$; j++)
+        Array[j]=j+1;
+
+permute(Array,0,n);
+
+cout$<<endl$;
+
+cout $<<''to \ \ exit \ \ enter \ \ a \ \ number ''$;
+
+int t; 
+
+$cin>> t$;
+
+$\}$
+
+}
+
+\frame{
+
+{\bf Definition :} We say a sequence $S$ of $0,1$ is {\color{orange} {{\bf nice}}}  if the number of ones and the number of zeros are the same and
+
+\vspace{2mm}
+
+in every prefix of $S$ the number of ones is not less than the number of zero.
+
+\vspace{2mm}
+
+{\bf Problem : } Write a program to print-out all the nice sequences of $0,1$ with length $n$
+
+
+$ x+y^2+\sqrt{z}$. 
+
+}
+
+\frame{
+
+void nice-string( int *Array, int i, int difference, int n) $\{$ \\
+
+        if (i==n) $\{$ \\
+
+         
+       \hspace{2mm}  if ( difference == 0) $\{$ \\
+       
+       \hspace{4mm}       cout$<<''new \ \ string= ''$; \\
+        \hspace{4mm}        for (int j=0; $j <n$; j++) \\
+        
+          \hspace{6mm}              cout$<<A[j]<<'',''$;
+
+
+           \hspace{4mm}     cout$<<endl$; \\
+           \hspace{2mm}  $\}$
+            
+            \hspace{2mm}    return; \\
+       $\}$ 
+
+\vspace{2mm}
+        if ( $difference < 0$ ) return;
+        
+        if ( $difference > n-i$) return;
+
+        Array[i]=0; \\
+        nice-string (Array,i+1,difference-1,n); \\
+
+        Array[i]=1;\\
+        nice-string (Array,i+1,difference+1,n);
+
+ $\}$
+
+}
+
+\frame{
+
+int main() $\{$
+
+cout$<<''hello''<<endl$;
+
+int n;
+
+cout$<<''enter \ \  an  \ \  even \ \ number ''$;
+
+$cin >> n$;
+
+int *Array=new int [n];
+
+subset(Array,0,0,n);
+
+cout$<<endl$;
+
+cout $<<''to \ \ exit \ \ enter \ \ a \ \ number ''$;
+
+int t; 
+
+$cin>> t$;
+
+$\}$
+
+
+}
+
+
+
+\frame{ \frametitle{ Ford-Fulkerson Max-Flow Algorithm }
+
+{\bf {\color{orange} {Max-Flow( ($D=(V,E)$ ) }}}
+
+\vspace{2mm}
+
+
+1.   Define flow $f$ for every edge $e$ by setting $f(e)=0$. 
+
+\vspace{2mm}
+
+2.   Repeat :   
+
+\vspace{2mm}
+
+3. \hspace{2mm}   Apply BFS-f-augmenting to find an $f$-augmenting path $p$
+
+\vspace{2mm}
+
+4. \hspace{2mm}   Let $\Delta_p= \min_{e \in p}{\Delta_e}$   
+
+\vspace{2mm}
+
+5.  \hspace{2mm}  {\bf for} each edge $e \in p$  
+
+\vspace{2mm}
+
+6. \hspace{5mm} {\bf if} $e$ is a forward edge 
+
+\vspace{2mm}
+
+7. \hspace{8mm} $f(e) := f(e)+ \Delta_p$. 
+
+\vspace{2mm}
+
+8. \hspace{5mm} {\bf else}   ($e$ is a backward edge)
+
+\vspace{2mm}
+
+9. \hspace{8mm} $f(e) := f(e)- \Delta_p$. 
+
+\vspace{2mm}
+
+10. Until no $f$-augmenting path $p$ can be found. 
+
+\vspace{2mm}
+
+11. Return $f$. 
+
+}
+
+% 
+% \frame{ 
+% 
+% 
+% \begin{center}
+% \colorbox{white}{\includegraphics[width=0.4\hsize]{./cut.pdf}}
+% \end{center}
+% 
+% }
+
+\end{document}
+

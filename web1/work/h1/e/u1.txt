@@ -1,0 +1,10 @@
+10.0.14.110     u10 u10.indstate.edu
+10.0.14.111     u11 u11.indstate.edu
+10.0.14.112     u12 u12.indstate.edu
+10.0.14.113     u13 u13.indstate.edu
+10.0.14.114     u14 u14.indstate.edu
+10.0.14.115     u15 u15.indstate.edu
+10.0.14.116     u16 u16.indstate.edu
+10.0.14.117     u17 u17.indstate.edu
+10.0.14.118     u18 u18.indstate.edu
+10.0.14.119     u19 u19.indstate.edu

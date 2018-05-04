@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title> Assignment 6 </title>
+
+<style type="text/css">
+
+/* Style the body with the background image (1920x1080.png) such that it doesn't
+   repeat in any direction.  The font is a sans-serif font. */
+
+
+body
+{
+ 
+background: url(http://cs.indstate.edu/~sbaker/cs170/class/h6/1920x1080.png);
+ 
+background-repeat: no-repeat;
+ 
+font-family:sans-serif;
+ 
+color:white;
+
+}
+
+
+
+
+/* The TV image should scaled to 640 pixels in width and centered in the tv
+   area. */
+
+
+p:nth-child(2) img
+{
+
+width:640px;
+
+position:fixed;
+
+Top:110px;
+
+left:856px;
+
+padding:80px;
+
+margin:0 160px;
+
+}
+
+
+
+
+/* The weather font is 24 pixels normally except for the temperature which is
+ 50 pixels and has a little bit of padding on the left. */
+
+
+
+p:nth-child(3) 
+{
+
+font-size: 25px;
+
+position: fixed;
+
+left: 1060px;
+
+Top: 700px;
+
+padding: 10px;
+
+margin: 0px;
+
+width: 370px;
+
+}
+
+
+p:nth-child(3) img
+{
+
+float:right;
+
+}
+
+
+p:nth-child(3) strong
+{
+
+font-size:50px;
+
+padding-left:45px;
+
+}
+
+
+
+
+
+/* The date font is 30 pixels and the time is 60 pixels high */
+ 
+ 
+
+p:nth-child(4)
+{
+
+font-size: 60px;
+    
+position: fixed;
+    
+top: 700px;
+    
+left: 1475px;
+    
+margin: 30px;
+ 
+}
+
+ 
+
+p:nth-child(4)::first-line 
+{
+ 
+font-size:30px;
+ 
+}
+
+
+
+
+/* The news box is 712 wide x 740 pixels high starting at 110 and 144 pixels
+   from the top and left respectively.  News titles are RGB 248/151/32 in
+   red/blue/green values and 55 pixels tall.  News text is white with a font
+   size of 46 pixels high.  There should be a blank line between news items. */
+
+
+p:first-child 
+{
+
+width:712px;
+ 
+height:740px;
+ 
+position:fixed;
+ 
+top:110px;
+ 
+left:144px;
+ 
+color:white;
+ 
+font-size:46px;
+ 
+overflow:hidden;
+ 
+padding:0px;
+ 
+margin:0px;
+ 
+}
+
+
+p:first-child u
+{
+
+font-size:55px;
+
+color:RGB(248,151,32);
+
+text-decoration:none;
+
+} 
+
+
+
+
+/* The ticker is a single line of text at the bottom, the font is 54 pixels
+   tall and the color as news titles.  The edge of the ISU logo is 312 pixels
+   from the left. The width of the ticker is 1607 pixels and text should not
+   be seen beyond the right edge of the background image. */
+
+
+p:last-child 
+{
+
+font-size:54px;
+
+color:rgb(248,151,32);
+
+
+width:1607px;
+
+overflow:hidden;
+
+position:fixed;
+
+left:312px;
+
+Top:915px;
+
+height:54px;
+
+padding:0;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+<!-- news box information -->
+
+<!-- first story --> 
+
+<p>
+
+<u>The Scholarship of Engagement: Documenting for tenure, promotion and biennial faculty reviews</u>
+<br/>
+
+This session on March 9 will focus on community engaged scholarship as a natural extension of effective teaching, librarianship, research, scholarship, creativity and service, a review relevant of ISU policies that govern tenure and promotion.
+
+<br/>
+<br/>
+
+<!-- second story -->
+
+<u>Spring 2016 Career Fair information and breakfast invitation</u>
+<br/>
+Encourage students to attend the Career Fair Wednesday and join company representatives for breakfast.<br/>
+
+</p>
+
+<p><img src="http://cs.indstate.edu/~sbaker/cs170/class/h6/cnn.jpg"></p>
+
+<!-- weather information --> 
+
+<p>
+
+Current Weather:
+<br/>
+
+<strong>39.9°F</strong>
+<br/>
+
+Feels like: 35.1°F
+<br/>
+
+Humidity: 73.1%
+<br/>
+
+</p>
+
+
+<!-- date and time -->
+
+<p>
+February 23, 2016
+<br/>
+
+12:51 PM
+<br/>
+
+</p>
+
+<!-- ticker information -->
+
+<p>-- The U.S. Senate will not confirm a Supreme Court nominee from President Barack Obama during his last year in office, Republican Senate Majority Leader Mitch McConnell said on Tuesday.</p>
+
+
+
+
+</body>
+</html>

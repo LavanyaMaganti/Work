@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+if [[ "$#" > 1 ]]; then 
+files="$@"
+
+
+for i in $files
+do
+  if [ -f $i ]; then
+  file=$[ $file + 1 ]
+  elif [ -d $i ]; then
+  dir=$[ $dir + 1 ]
+  elif [[ -L $i ]]; then
+  link=$[ $link + 1 ]
+  else
+  misc=$[ $misc + 1 ]
+  fi
+done 
+
+echo "Files $file"
+echo "Dirs $dir"
+echo "Links $link"
+echo "Misc $misc"

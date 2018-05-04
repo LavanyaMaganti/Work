@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{fig_2}
+Agglomerative figure.
+\newblock
+  \url{http://www2.cs.uregina.ca/~dbd/cs831/notes/clustering/clustering.html},
+  2004.
+\newblock [Online; accessed 22-July-2004].
+
+\bibitem{fig_1}
+Clustering introduction figure.
+\newblock \url{http://home.deib.polimi.it/matteucc/Clustering/tutorial_html/},
+  2004.
+\newblock [Online; accessed 22-July-2004].
+
+\bibitem{fig_3}
+K-means figure.
+\newblock \url{http://www.learnbymarketing.com/methods/k-means-clustering/},
+  2004.
+\newblock [Online; accessed 22-July-2004].
+
+\bibitem{wiki_his}
+Wikipedia.
+\newblock K-means clustering history.
+\newblock \url{https://en.wikipedia.org/wiki/K-means_clustering#History}, 2004.
+\newblock [Online; accessed 22-July-2004].
+
+\end{thebibliography}

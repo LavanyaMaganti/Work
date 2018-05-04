@@ -1,0 +1,42 @@
+03-28-2017
+
+Break and Continue
+==================
+- Sometimes we want to exit a loop or do the next loop iteration early, to do
+  so we use the break; and continue; statements respectively.
+
+  break [<label>];
+   - Exits the loop immediately.  Execution continues at the point following the
+     loop.
+   - The optional <label> is used to break from a multi-level loop or from 
+     within a switch.
+
+  ex:
+  var i = 0, s = "A string with more than 10 characters";
+  while (true) {
+    console.log(i, s[i]);
+    if (i++ > 8) break;
+  }
+  - Prints the first 10 letters of the string in s with its index number and
+    stops.
+
+  continue [<continue>];
+   - Immediately goes to the expression test part of the loop, skipping any
+     remaining statements in the loop.
+
+  /**
+   * s = The string to scan.
+   * i = Index into the string s;
+   * t = A new string which will hold s minus the vowels.
+   */
+  var i=0, c, s = "The quick brown fox jumped over the fence.";
+  var t = "";
+  // Set c to the character in s at index i.  If s[i] is null this will stop
+  // the loop since the result of the assignment is not true.
+  while (c = s[i++]) {
+    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') continue;
+    // Not a vowel, so append the character in c to t:
+    t += c;
+  }
+  // Will print what was in s but w/o any vowels:
+  console.log(t);

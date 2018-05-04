@@ -1,0 +1,75 @@
+.TH MUG 3  2016-11-09 "" "Sharath's Programmer Manual"
+.SH NAME
+Multi User Game
+.SH SYNOPSIS
+.nf 
+    Use 
+    setenv GAMEUSER 
+    setenv GAMEPASS 
+    to set your username and password
+
+
+.B #include <mug07.h>
+.sp
+.BI startclient()
+.BI listenclient()
+.BI reportlocation()
+
+.fi
+.SH DESCRIPTION
+.BR startclient()
+    starts the client 
+.nf
+.BR listenclient()
+    listen to the server
+.nf
+.BR reportlocation()
+    report to the server
+.PP
+.PP
+.PP
+.PP
+.nf
+You have these available which you can use it in your program
+.nf
+int NMON;
+.nf
+MONSTER *me;
+.fi
+.in
+.PP
+me has mynumber which is your id
+
+.BRUse startclient() in main
+
+.BRInside animate()
+
+Use
+ me[mynumber].x 
+ me[mynumber].y
+ me[mynumber].z
+
+and assign your tanks x,y,z 
+
+and also call  
+  listenclient();
+  reportclient();
+
+.BRInside build.c draw all the tanks like
+NMON gives you number of users 
+all you have to do is
+.nf
+void drawtanks(){
+  for(i=0;i<NMON;i++){
+  glPushMatrix();
+   glTranslatef(me[i].x,me[i].y,me[i].z);
+   drawtank();
+   glPopMatrix();
+  glPopMatrix();
+  }
+}
+
+.SH AUTHOR
+Written by Sharath.
+.SH COLOPHON
+This page is part of the BETA version of the SUPER COOL GAME being developed in Dr. Exoo's CS440.

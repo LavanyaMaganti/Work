@@ -1,0 +1,17 @@
+ <?php include 'header.php'; ?>
+  
+    <?php
+         if($_POST["Submit"])
+              {
+                    
+                             $DB = 'sqlite:student.sqlite';
+                                      $conn = new PDO($DB) or die("DB connection Failed");
+                                               $tableData = $conn -> query("SELECT * FROM Student");
+                                                        if($tableData)
+                                                                   echo "User Found Login Succesfull";
+                                                                            else
+                                                                                       echo "Login Failed";
+                                                                                              
+                                                                                                   }
+                                                                                                     ?>
+                                                                                                     

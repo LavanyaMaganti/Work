@@ -1,0 +1,79 @@
+01-18-2017 (lab session):
+
+Review:
+  Notes conventions:
+   <x>	= Replace <x> with what x represents.
+   [x]	= x is optional.
+
+  > passwd		- Change your password.
+  > chfn		- Change your identity information.
+  > man <command>	- Read the online manual page on <command>
+
+  > ls [-a] [-l] [--help] [<path>]		- List files
+    -a  = List all files, including hidden files: files beginning with a dot (.)
+    -l	= Long listing
+
+  > ls -l output decoded:
+    -rw-r--r-- 1 user group   283 Jan 13 18:52 file
+    |\ /\ /\ / | \        / `File \_________/  `---- Filename
+    | U  G  O  |  \______/   Size      `------------ Last modified time
+    |  perms   |     `----------------------------- User and Group ownerships
+    |          `----------------------------------- Hard link count
+    `---------------------------------------------- File type
+
+    U = User permissions (used if the owner is accessing the file)
+    G = Group permissions (used if a group owner is accessing a file)
+    O = Other permissions (used in all other cases)
+
+  Permissions:
+    r = readable
+    w = writable / modifiable
+    x = Executable (for files) / Search-able (directories, i.e. can 'cd' into)
+
+  File types:
+    - = Regular file
+    d = Directory
+    l = symbolic link
+
+- Basic wild-cards:
+  ~		- Your home directory.
+  ex:
+   cd ~
+   cp xy ~/dir/
+
+  ~<user>	- <user>'s home directory
+
+  ex: cp ~sbaker/public_html/cs469/code/xx .
+
+  Note:  pressing the tab key can expand partially typed file-names.  Use tab
+    to speed typing of paths.
+  
+  *		- matches zero or more characters
+
+  ex:		Matches:
+  R*		anything beginning with R.
+  *.txt		anything ending in .txt
+
+  ?		- Matches any single character
+
+  ex: b???	- Anything starting with b and exactly 4 characters in length.
+
+  [...]		- Like ?, but only matches any of the specified characters.
+  [a-z]		- Matches any letter in the range a to z.
+  [^...]	- Matches any letter NOT listed.
+
+  ex: cs469[0-9][0-9]	- Starts with cs469 and ends with 2 digits.
+
+- Path length are likely limited to 4096 bytes (depends on file-system)
+  /	= root file-system directory
+  .	= current directory
+  ..	= parent directory
+  .*	= "hidden" file (not normally listed unless -a option used.)
+
+- Paths are directories and/or a file separated by forward slashes (/).
+  Slashes therefor cannot be in a file-name.
+
+- Path components are separated by forward slashes:
+  ex: /etc/rc.d/rc.local
+  ex: ../../x/y/z
+  ex: /x/../y/. -> /y

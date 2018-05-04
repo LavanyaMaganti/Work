@@ -1,0 +1,57 @@
+01-17-2017
+
+Course Website:
+  http://cs.indstate.edu/~sbaker/cs151/
+
+Syllabus:
+  http://cs.indstate.edu/~sbaker/cs151/syllabus.html
+
+- Discuss grading, tests, attendance, extra credit, weekly quizzes.
+- No cheating / plagiarism.
+- Hand out accounts:
+
+- CS101 - moving students who do poorly to CS101 after 5 weeks.
+
+- Demonstrate Putty/WinSCP on windows.
+
+Unix commands:
+-------------
+ - Unix commands are words (usually) separated by spaces terminated by a
+   newline or semicolon (;)  The first word is the "command" name, the words,
+   if any, that follow it are it's "arguments", that tell the command what it
+   needs to do.
+
+  <command-name> <arguments...>
+  - argument words that start with a dash (-) are command line switches.
+    ex: -a, -r, etc.
+  - Double dash arguments are full word switches, i.e.: --help, --version, etc.
+
+To change your password, at a terminal prompt:
+> passwd
+  - You will be prompted for your old password then your new password two times.
+  - You will not see the characters you type.
+
+To change your finger (identity) information:
+> chfn
+  - You will be prompted for your password, then enter at least your real name
+    to associate your I.R.L. identity with your account.
+
+- Basic commands:
+
+  man [<section>] <command|config_file|topic>
+    - Gives help on <command> from the on-line manual pages.
+  > man -k <string>
+    - Searches for man pages containing <string> in their NAME section.
+
+  ex: > man man
+       1      User Commands
+       2      System Calls
+       3      C Library Functions
+       4      Devices and Special Files
+       5      File Formats and Conventions
+       6      Games et. Al.
+       7      Miscellanea
+       8      System Administration tools and Deamons
+
+  > info <command>
+    - Like man, but for GNU utilities.

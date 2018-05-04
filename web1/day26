@@ -1,0 +1,207 @@
+04-20-2017
+
+Sorting:
+=======
+- One of the most common things a computer does is sort things. There are many
+  algorithms to sort things.
+
+  Given:
+  var a = [ ... ]; // an unsorted array of numbers.
+
+Insertion sort:
+---------------
+/**
+ * Starts at the second element in the array and shifts the element down to its
+ * final spot as long as the elements below it are bigger than the current value
+ */
+for(var i = 1; i < a.length; i++) {
+  var v = a[i];
+  var j = i-1;
+  // Shifts elements in a to the right to make room for v in its final position:
+  while (j >= 0 && a[j] > v) {
+    a[j+1] = a[j];
+    j--;
+  }
+  a[j+1] = v;
+}
+
+Selection sort:
+--------------
+/**
+ * Keeps an index (i) that starts at the beginning of the array and goes until
+ * the length of the array minus one.  On each iteration a second loop finds the
+ * smallest element in the array above the index and swaps the smallest element
+ * with the element at the current index.
+ */
+for(var i=0; i < a.length-1; i++) {
+  var min = i;
+  for(var j=i+1; j < a.length; j++) {
+    // If we find a new minimum, record it's position:
+    if (a[j] < a[min]) min = j;
+  }
+  // If the minimum isn't at the current index, swap the values at those
+  // locations:
+  if (min != i) {
+    var t = a[i];
+    a[i] = a[min];
+    a[min] = t;
+  }
+}
+
+JavaScript .sort method:
+-----------------------
+ .sort(<comparison function>);
+  - The comparison function is a function that takes two arguments (say 'a' and
+    'b') to be compared.  The function should return:
+      < 0 if: a < b
+        0 if: a == b
+      > 0 if: a > b
+    For numeric sorting, subtracting b from a will usually give you the above.
+    If you want to reverse the order of the sort, subtract a from b. or use
+    the - sign to invert the returned value. i.e. -(a-b)
+
+ ex:
+   a.sort(function(a,b) { return a-b; });
+
+/* Insertion sort */
+for(var i = 1; i < a.length; i++) {
+  var v = a[i], j = i-1;
+  while (j >= 0 && a[j] > v) {
+    a[j+1] = a[j]; j--;
+  }
+  a[j+1] = v;
+}
+
+/* Selection sort */
+for(var i=0; i < a.length-1; i++) {
+  var min = i;
+  for(var j=i+1; j < a.length; j++) if (a[j] < a[min]) min = j;
+  if (min != i) {
+    var t = a[i]; a[i] = a[min]; a[min] = t;
+  }
+}
+
+Big O notation:
+--------------
+- Characterizes functions according to their growth rates (how many steps a
+  function takes based on its input size).
+
+A single step - O(1):
+--------------------
+- Consider the following:
+    if (a[0] == value) return 0;
+  as single "step".  This is O(1) (read big O of 1) or "constant"
+
+- If a fixed or constant (say C) number of steps are required to perform a task,
+  it is still "constant" or O(1).  The size of C does not matter so long as its
+  fixed and does not grow with the size of the "input".
+
+- O(1) functions are those that do not grow in time or space based on the input.
+  Common algorithms that are usually O(1):
+  - Hash tables.
+  - Determining if a number is even or odd.
+
+Searching:
+---------
+- Finding things in arrays is a common task of which there are two common
+  approaches that follow.
+
+  Given:
+  var a = [ ... ]; // A sorted array of numbers.
+  var value;       // A value to be found in a
+
+  The algorithms will return the index the value is found at or -1 if it is not
+  found in the array.
+
+Linear search:
+-------------
+/**
+ * Searches from the beginning of the array until the end.
+ */
+for(var i = 0; i < a.length; i++) {
+  if (a[i] == value) return i;
+}
+return -1;
+
+- If there are "n" items in the array, then there are n "steps" required to
+  exhaustively search for any element.  This is O(n) (Big O of n) or "linear"
+
+- "n" is the size of the input, i.e. the number of elements in the array in this
+  case.  We assume that "n" has no bounds, the time the algorithm takes relates
+  directly to the size of "n".
+
+- Adding or subtracting two (n bit) numbers is in this same class of
+  "difficulty".
+- Technically the comparison of two values is also O(n), however all our values
+  are of fixed size (64 bits), so we may reduce them to O(C=64) or constant
+  time.
+
+Binary search:
+-------------
+- Set L to index 0
+- Set R to the index at the end of the array (a.length-1)
+
+- Loop while L <= R:
+  Check m = floor((L+R)/2) (The middle element between L and R)
+  If the element (a[m]) is the value, return the index (m), we're done.
+  If a[m] < value, set L = m+1; // Value is in the upper half of search region
+  If a[m] > value, set R = m-1; // Value is in the lower half of search region
+
+var L = 0;
+var R = a.length-1;
+while (L <= R) {
+  var m = Math.floor((L+R)/2);
+  if (a[m] == value) return m;
+  if (a[m] < value) L = m+1;
+  else R = m-1;
+}
+return -1;
+
+- Divides the search space in half at each step.
+- If there are "n" items in the array, then there are log_2(n) "steps" required
+  to exhaustively search for any particular element.  This is: O(log_2(n))
+
+
+Common Big O functions:
+----------------------
+O(1)
+ - Constant:
+  - Hash tables.
+  - Determining if a number is even or odd.
+
+O(log n)
+ - Logarithmic:
+  - Finding an item in a sorted array using Binary search:
+
+O(n)
+ - Linear:
+  - Examples include linear searches, addition of two n bit numbers.
+
+O(n log n)
+ - linearithmic:
+  - Many sorting algorithms including heapsort, quicksort or mergesort.
+  
+O(n^2)
+ - Quadratic:
+  - Multiplication of two n bit numbers.
+  - Simple sorts such as selection sort or insertion sort.
+  - The worst cases for some n*log n sorts such as quicksort or bubble-sort.
+  - Drawing a n by n box is quadratic.
+
+O(n^c), C > 1
+ - Polynomial:
+  - a loop inside a loop inside a loop would be O(n^3):
+    for(int i=0; i < n; i++)
+      for(int j=0; j < n; j++)
+        for(int k=0; k < n; k++)
+
+- sub-exponential: Factoring a number is somewhere in here, between O(n^c) and
+  O(c^n)
+      
+O(c^n), c > 1
+ - Exponential:
+  - Examples: Traveling Salesman problem.  NP problems.
+
+O(n!)
+ - Factorial
+

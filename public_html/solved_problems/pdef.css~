@@ -1,0 +1,155 @@
+body {
+background-color:#ffffff;
+}
+
+.panel-heading{
+        background:#D6E8F8;
+                color: #0000ff;
+                        overflow:hidden;
+                        
+                        }
+                        
+                        .logo{
+                                height:0px;
+                                        float:center;
+                                        }
+                                        
+                                        
+                                        .tagline{
+                                                padding-top:20px;
+                                                        text-decoration:underline;
+                                                                font-size=15px;
+                                                                        color:#fff;
+                                                                                
+                                                                                }
+                                                                                
+                                                                                #form_layout{
+                                                                                width:300px;
+                                                                                float: left;
+                                                                                border-radius: 10px;
+                                                                                font-family:raleway;
+                                                                                border: 2px solid #ccc;
+                                                                                padding: 10px 40px 25px;
+                                                                                margin-top: -2px;
+                                                                                }
+                                                                                
+                                                                                p{
+                                                                                font-size:12px;
+                                                                                color:red;
+                                                                                }
+                                                                                
+                                                                                .error{
+                                                                                  color:red;
+                                                                                    font-style:italic;
+                                                                                      font-size:10px;
+                                                                                        
+                                                                                        }
+                                                                                        
+                                                                                        
+                                                                                        input[type=submit]{
+                                                                                        width: 50%;
+                                                                                        color: black;
+                                                                                        border:#000000;
+                                                                                        font-size:20px;
+                                                                                        cursor:pointer;
+                                                                                        margin-bottom: 15px;
+                                                                                        border-style: solid;
+                                                                                        border-width: 3px;
+                                                                                        }
+                                                                                        
+                                                                                        input[type=text]{
+                                                                                        width: 75%;
+                                                                                        color: black;
+                                                                                        border:#000000;
+                                                                                        font-size:20px;
+                                                                                        cursor:pointer;
+                                                                                        border-style: solid;
+                                                                                        border-width: 1px;
+                                                                                        }
+                                                                                        
+                                                                                        select {
+                                                                                          width: 75%;
+                                                                                          color: black;
+                                                                                          border:#000000;
+                                                                                          font-size:20px;
+                                                                                          cursor:pointer;
+                                                                                          border-style: solid;
+                                                                                          border-width: 1px;
+                                                                                            
+                                                                                            }
+                                                                                            textarea {
+                                                                                              width: 75%;
+                                                                                              color: black;
+                                                                                              border:#000000;
+                                                                                              font-size:20px;
+                                                                                              cursor:pointer;
+                                                                                              border-style: solid;
+                                                                                              border-width: 1px;
+                                                                                                
+                                                                                                }
+                                                                                                #nav{
+                                                                                                  width:100%;
+                                                                                                    float:center;
+                                                                                                      height:100px;
+                                                                                                        font-size:10px;
+                                                                                                        }
+                                                                                                        
+                                                                                                        #nav_wrapper{
+                                                                                                          height:70px;
+                                                                                                            width:600px;
+                                                                                                              background:#2d3642;
+                                                                                                                margin-left:auto;
+                                                                                                                  margin-right:auto;
+                                                                                                                    margin-top:100px;
+                                                                                                                    }
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    #nav_wrapper ul li{
+                                                                                                                      list-style:none;
+                                                                                                                        display:inline;
+                                                                                                                          font-weight:bold;
+                                                                                                                            padding:5px;
+                                                                                                                            }
+                                                                                                                            #nav_wrapper a{
+                                                                                                                              color:white;
+                                                                                                                                font-size:35px;
+                                                                                                                                  text-decoration:none;
+                                                                                                                                    padding:10px;
+                                                                                                                                    }
+                                                                                                                                    
+                                                                                                                                    #nav_wrapper ul 
+                                                                                                                                    li:hover{
+                                                                                                                                      background:#fffff;
+                                                                                                                                        color:black;
+                                                                                                                                          transition:all 2.0s;
+                                                                                                                                            font-size:150%;
+                                                                                                                                            }
+                                                                                                                                            #nav_wrapper ul li:hover ul{
+                                                                                                                                              display:block;
+                                                                                                                                                
+                                                                                                                                                }
+                                                                                                                                                #nav_wrapper ul ul{
+                                                                                                                                                  display:none;
+                                                                                                                                                    position:absolute;
+                                                                                                                                                    }
+                                                                                                                                                    #nav_wrapper ul ul li {
+                                                                                                                                                      display:block;
+                                                                                                                                                        
+                                                                                                                                                        }
+                                                                                                                                                        .left{
+                                                                                                                                                          
+                                                                                                                                                            float:left;
+                                                                                                                                                            }
+                                                                                                                                                            
+                                                                                                                                                            .right{
+                                                                                                                                                              
+                                                                                                                                                                float:right;
+                                                                                                                                                                }
+                                                                                                                                                                
+                                                                                                                                                                .panel-footer { 
+                                                                                                                                                                    background:#2d3642;
+                                                                                                                                                                            color: #fff;
+                                                                                                                                                                                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                                                                                                                                                                                            overflow:hidden
+                                                                                                                                                                                                bottom:auto;
+                                                                                                                                                                                                }

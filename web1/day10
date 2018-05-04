@@ -1,0 +1,64 @@
+02-16-2017:
+
+- Covered test1 and lab test #1.
+- Switching to 101.
+
+JavaScript
+----------
+- What is a programming "Language"?
+  - Simply it is a formal (i.e. well-defined) language that is unambiguous at
+    all levels.  << Where in English words may have different meaning based on
+    context, computers do not handle such ambiguity well. >>
+  - The purpose of the language is to instruct the computer, usually when given
+    some input, to perform operations on the given input.
+  - In that respect a program is like a recipe, ingredients (input) in,
+    something to eat out.
+  - Computers only understand very simple things at the lowest levels, like:
+    - Copy data from one place to another. (assignment)
+    - Do numeric operations (such as addition, multiplication) (expressions)
+    - compare two values and determine if they are the same or not or if one
+      is less or greater than the other. (conditionals, Boolean logic)
+    - Jump around from one place to another in the program depending on the
+      outcomes of the above comparisons. (loops and functions)
+  - Computer languages attempt to abstract the simple things computers do to
+    a higher level to make things easier for the programmer.  <<Some languages
+    do so better than others.>>
+
+- What is the "syntax" of a computer language?
+  - It is the grammar, or rules for the language, just as English does,
+    computer languages have similar rules, but much more limited range of
+    expression.
+
+- For this class we will learn JavaScript aka ECMAScript.  It is incorporated
+  into almost every browser, and also stand-alone as interpreters/compilers
+  such as node.js or "node" and SpiderMonkey or "js".
+
+- Demonstrate simple JS hello, world!:
+---
+<!DOCTYPE html>
+<html>
+<head>
+ <title> Hello, world! </title>
+ <meta charset='utf-8'>
+</head>
+<body>
+ <script>
+  /**
+   * Prints "Hello, world!" to the JavaScript console. Type Ctrl-Shift-i to
+   * access the console.
+   */
+  console.log("Hello, world!");
+ </script>
+</body>
+</html>
+---
+
+- "Hello, world!" as a node program:
+---
+#!/usr/local/bin/node
+/**
+ * Prints "Hello, world!" to the console.
+ */
+console.log("Hello, world!");
+---
+

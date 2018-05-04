@@ -1,0 +1,6 @@
+139.102.55.157	y35 y35.indstate.edu
+139.102.12.57	n15 n15.indstate.edu
+10.0.0.157	c7 c7.indstate.edu
+139.102.53.157  ll44 ll44.indstate.edu
+139.102.26.98   ll57 ll57.indstate.edu
+139.102.26.57	ll107 ll107.indstate.edu

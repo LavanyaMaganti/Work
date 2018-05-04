@@ -1,0 +1,58 @@
+
+#include "main.h"
+
+unsigned int missileflag = 0;
+
+MISSILE miss;
+
+extern GLuint redtex;
+
+extern EYE eye;
+
+void firemissile()
+{
+  GLfloat th;
+
+  if(missileflag)
+    return;
+  missileflag = 1;
+  th = eye.facing.theta;
+  miss.len = 5.00;
+  miss.x = eye.x; 
+  miss.y = eye.y; 
+  miss.z = eye.z; 
+  miss.vx = 0.015 * cos(th);
+  miss.vy = 0.005;
+  miss.vz = 0.015 * sin(th);
+}
+void movemissile()
+{
+  if(!missileflag)
+    return;
+  miss.vy -= 0.00001;
+  miss.x += miss.vx;
+  miss.y += miss.vy;
+  miss.z += miss.vz;
+  if(miss.y < 0.0)
+    missileflag = 0;
+}
+void drawmissile()
+{
+  GLfloat xperp, zperp;
+
+  if(!missileflag)
+    return;
+  fprintf(stderr,"%f  %f  %f\n", miss.x, miss.y, miss.z);
+  glBindTexture(GL_TEXTURE_2D, redtex);
+  xperp =  miss.vz;
+  zperp = -miss.vx;
+  glBegin(GL_TRIANGLES);
+    glVertex3f(miss.x,miss.y,miss.z);
+    glVertex3f(miss.x-miss.len*(miss.vx + xperp),
+               miss.y-miss.len*miss.vy,
+               miss.z-miss.len*(miss.vz + zperp));
+    glVertex3f(miss.x-miss.len*(miss.vx - xperp),
+               miss.y-miss.len*miss.vy,
+               miss.z-miss.len*(miss.vz - zperp));
+  glEnd();
+}

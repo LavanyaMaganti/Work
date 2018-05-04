@@ -1,0 +1,38 @@
+To solve towers of hanoi of 5 disks and 3 poles follow below instructions: 
+Let us assume 3 poles be P1,P2 and P3.
+Let disks be D1,D2,D3,D4 and D5.
+Put disks on P1 in this order: D5,D4,D3,D2 and D1.
+Move D1 from P1 to P3.
+Move D2 from P1 to P2.
+Move D1 from P3 to P2.
+Move D3 from P1 to P3.
+Move D1 from P2 to P1.
+Move D2 from P2 to P3.
+Move D1 from P1 to P3.
+Move D4 from P1 to P2.
+Move D1 from P3 to P2.
+Move D2 from P3 to P1.
+Move D1 from P2 to P1.
+Move D3 from P3 to P2.
+Move D1 from P1 to P3.
+Move D2 from P1 to P2.
+Move D1 from P3 to P2.
+Move D5 from P1 to P3.
+Move D1 from P2 to P1.
+Move D2 from P2 to P3.
+Move D1 from P1 to P3.
+Move D3 from P2 to P1.
+Move D1 from P3 to P2.
+Move D2 from P3 to P1.
+Move D1 from P2 to P1.
+Move D4 from P2 to P3.
+Move D1 from P1 to P3.
+Move D2 from P1 to P2.
+Move D1 from P3 to P2.
+Move D3 from P1 to P3.
+Move D1 from P2 to P1.
+Move D2 from P2 to P3.
+Move D1 from P1 to P3. 
+Total number of moves: 31
+Formulae: 2^n-1 (n=number of disks)  
+  

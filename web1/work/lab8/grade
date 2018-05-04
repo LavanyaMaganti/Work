@@ -1,0 +1,24 @@
+lab exercise #8:
+l1.js:
+l2.js:
+l3.js:
+l4.js:
+l5.js:
+l6.js:
+l7.js:
+l8.js:
+-1 output of program (l8.js) is not correct for input '/u1/h7/sbaker/bin/check/data/8/l7.1':
+------ Yours: ------
+Spaces : 51
+Letters : 416
+Numbers : 2
+---- Reference: ----
+Spaces : 51
+Letters: 273
+Numbers: 2
+--------------------
+ if (ch >= '0' && ch <= '9') ncount++;
+ if (ch >= 'a' && ch <= 'z') lcount++;
+ if (ch >= 'A' && ch <= 'Z') lcount++;
+
+9.00 out of 10 Points.

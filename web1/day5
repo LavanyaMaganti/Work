@@ -1,0 +1,107 @@
+01-31-2017:
+
+ <div>	- Groups block-elements, Has no special meaning, represents its children.
+
+ <a>	- Represents a hyperlink if it contains an href attribute. <<otherwise a
+	  placeholder for a link. >>
+	Attributes:
+	  href - A valid URL.
+	  target - Where to open the link:
+	    _blank	New window or tab
+	  download - boolean indicating the link is for downloading a resource.
+
+	ex: <a href='relative/url.html'> Relative to source page </a>
+	    <a href='/full/path.html'> Starts at base dir on same server </a>
+	    <a href='http://full.com/path'> Full URL </a>
+	    <a href='#xyz'> Moves to element with id 'xyz' within document </a>
+	    <a target=_blank href='new.html'> Open in a new tab </a>
+	    <a download href='file.zip'> Download a file </a>
+
+ <sub>	- Subscript text.
+ <sup>	- Superscript text.
+ <i>	- Italicized text.
+ <b>	- Bold text.
+ <u>	- Underlines text.
+
+ <span>	- Groups in-line objects, otherwise no special meaning.
+
+ <br\>	- Represents a line break.
+
+Tabular Data:
+------------
+ <table> - Tabular data in the form of a table.
+	Attributes:
+	border - specifies if the table cells should have a border or not and
+		 the size in pixels of the outside table border in pixels.
+
+ <tbody> - The tables main body (can have more than one)
+ <thead> - Heading section for a table.
+ <tfoot> - Footer section for a table.
+
+ <tr>	- A row of cells (columns) in the table.
+
+ <th>	- A header cell in a table.
+ <td>	- A data cell in a table.
+	Attributes:
+	  colspan - The number of columns this cell spans.
+	  rowspan - The number of rows this cell spans.
+	  headers - The ID of a td, or th element that represents a header
+	    target for this element.
+	  Depreciated in HTML5:
+	  align	  - Align text horizontally (left/right/center/justify/char)
+	  valign  - Align text vertically (top/middle/bottom/baseline)
+
+
+Table example:
+
++---+---+---+
+| A | B | C |
++---+---+---+
+|   | X | Y |
+| 1 +---+---+
+|   |   Z   |
++---+---+---+
+|   2   | 3 |
++---+---+---+
+
+<table border=1>
+ <tbody>
+ <tr>
+  <th> A </th>
+  <th> B </th>
+  <th> C </th>
+ </tr>
+ <tr>
+  <td rowspan=2> 1 </td>
+  <td> X </td>
+  <td> Y </td>
+ </tr>
+ <tr>
+  <td colspan=2> Z </td>
+ </tr>
+ <tr>
+  <td colspan=2> 1 </td>
+  <td> 3 </td>
+ </tr>
+ </tbody>
+</table>
+
+Introduction to CSS:
+===================
+Three ways to specify style information:
+
+1) Include a stylesheet directly in the HTML/<head> section with:
+  <style>
+    [style data...]
+  </style>
+
+2) As an external resource using link:
+  <link rel='stylesheet' src='style.css' type='text/css'/>
+
+  Alternate style sheets can be specified with a link, by including 'alternate'
+  in the rel attribute:
+
+  ex: <link rel='alternate stylesheet' src='alt.css' type='text/css'/>
+
+3) On an element using the style= attribute:
+  ex: <div style='border: 1px solid black;'>  ... </div>

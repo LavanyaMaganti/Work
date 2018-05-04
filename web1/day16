@@ -1,0 +1,71 @@
+03-09-2017:
+
+- Anonymous functions:
+  - These are functions that are created without a name, they can be assigned
+    to a variable, so that it has a name.  Often they're just passed to a
+    function as a "callback" function a function that the other function uses.
+  ex:
+  
+  var add = function(a, b) { // Note that there is no name following function.
+    return a + b;
+  }
+  // The function is used in the normal way:
+  console.log(add(1,2));
+
+
+Variables and Scope:
+===================
+- The "scope" of a variable is it's visibility to various areas inside the
+  program.
+- Variables declared with "var" inside of functions are "local" to the function.
+  That is they are only visible or members of the function and don't exist
+  outside of the function.  This includes the argument variables.
+- Variables declared outside of the function are "global" and are visible inside
+  of all functions.
+
+var g = 1;
+
+function foo(a, b) {
+  g = a+b;
+}
+console.log(g);		// prints out 1;
+foo(2,3);
+console.log(g);		// prints out 5;
+
+<< Talk about functions and variables as business units. >>
+
+
+Strings:
+=======
+- Strings as we've seen are lists of characters enclosed in quotes (single or
+  double quotes.)
+
+- Each character in the string can be accessed individually by specifying
+  the integer index inside of []'s that are appended to the variable name or
+  string constant. i.e:
+    str[i]
+  or:
+    'abc'[i]
+  The first character in a string is at index 0, the second at index 1, etc.
+  If the index is negative or beyond the length of the string the result is
+  "undefined", i.e.:
+    var str = "abc";
+    str[3] == undefined
+
+- The length property gives the number of characters in the string:
+  var a = "ten letters";
+  console.log(a.length);	// outputs 11.
+
+- Properties can be accessed on string constants:
+  "abc".length == 3
+
+- Methods are functions that operate on the variable or constant:
+    var a = "one two three";
+    a.split(' ');
+  or:
+    "one two three".split(' ');
+
+  - Makes an array: ["one", "two", "three"] where the string is "split" into
+    words separated by the string passed to the split method.
+
+    a.split(""); // Breaks string in a into an array, one character per index.

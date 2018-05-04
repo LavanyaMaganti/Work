@@ -1,0 +1,17 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}
+\BOOKMARK [2][-]{subsection.1.1}{Cryptography}{section.1}
+\BOOKMARK [3][-]{subsubsection.1.1.1}{History}{subsection.1.1}
+\BOOKMARK [3][-]{subsubsection.1.1.2}{Types of Cryptography}{subsection.1.1}
+\BOOKMARK [2][-]{subsection.1.2}{DES}{section.1}
+\BOOKMARK [3][-]{subsubsection.1.2.1}{History of DES}{subsection.1.2}
+\BOOKMARK [1][-]{section.2}{Background}{}
+\BOOKMARK [2][-]{subsection.2.1}{Notation}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{Permutation}{section.2}
+\BOOKMARK [1][-]{section.3}{The DES Cryptosystem}{}
+\BOOKMARK [2][-]{subsection.3.1}{Description}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{Working of DES}{section.3}
+\BOOKMARK [3][-]{subsubsection.3.2.1}{The Key Generation}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.2}{The S-box Substitution}{subsection.3.2}
+\BOOKMARK [3][-]{subsubsection.3.2.3}{DECRYPTION}{subsection.3.2}
+\BOOKMARK [1][-]{section.4}{Implementation}{}
+\BOOKMARK [1][-]{section.5}{Conclusion}{}

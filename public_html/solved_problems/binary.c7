@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+
+int main()
+{
+
+int c,n,x,d,a,b;
+printf("Welcome! Select an option:\n");
+printf("1:Decimal to Binary.\n");
+printf("2:Binary to Decimal.\n");
+printf("Enter Choice:");
+scanf("%d", &n);
+
+if(n==1)
+{
+printf("Enter a Decimal number: ");
+scanf("%d", &n);
+}
+if(n==2)
+{
+printf("Enter a Binary  number: ");
+scanf("%d", &n);
+}
+
+if(x!=1)
+{
+a=x/2;
+b=x%2;
+x=a;
+}
+
+c[0]=x;
+d=c-1;
+
+for(i=1;i<=c;i++)
+{
+c[1] = b[d];
+d--;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+

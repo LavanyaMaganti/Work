@@ -1,0 +1,30 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}
+\BOOKMARK [2][-]{subsection.1.1}{Clustering}{section.1}
+\BOOKMARK [2][-]{subsection.1.2}{What is good clustering}{section.1}
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Characteristics of Good Clustering Algorithm}{subsection.1.2}
+\BOOKMARK [1][-]{section.2}{Clustering Methods}{}
+\BOOKMARK [2][-]{subsection.2.1}{Partitioning Method}{section.2}
+\BOOKMARK [2][-]{subsection.2.2}{Hierarchical Method}{section.2}
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Agglomerative method}{subsection.2.2}
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Divisive method}{subsection.2.2}
+\BOOKMARK [2][-]{subsection.2.3}{Density based method }{section.2}
+\BOOKMARK [2][-]{subsection.2.4}{Model based method}{section.2}
+\BOOKMARK [2][-]{subsection.2.5}{Graph based method}{section.2}
+\BOOKMARK [1][-]{section.3}{Applications}{}
+\BOOKMARK [2][-]{subsection.3.1}{Image Compression:}{section.3}
+\BOOKMARK [2][-]{subsection.3.2}{Voice Biometrics:}{section.3}
+\BOOKMARK [2][-]{subsection.3.3}{Marketing:}{section.3}
+\BOOKMARK [2][-]{subsection.3.4}{Libraries:}{section.3}
+\BOOKMARK [2][-]{subsection.3.5}{WWW:}{section.3}
+\BOOKMARK [1][-]{section.4}{K-Means Clustering}{}
+\BOOKMARK [2][-]{subsection.4.1}{History}{section.4}
+\BOOKMARK [2][-]{subsection.4.2}{K-Means}{section.4}
+\BOOKMARK [2][-]{subsection.4.3}{ALGORITHM:}{section.4}
+\BOOKMARK [2][-]{subsection.4.4}{ASSIGNING POINTS TO THE CLOSEST CENTROID:}{section.4}
+\BOOKMARK [2][-]{subsection.4.5}{MEAN COMPUTATION AND OBJECTIVE FUNCTION:}{section.4}
+\BOOKMARK [2][-]{subsection.4.6}{OBJECTIVE FUNCTION OR THE SQUARED ERROR FUNCTION:}{section.4}
+\BOOKMARK [2][-]{subsection.4.7}{Code Implimentation:}{section.4}
+\BOOKMARK [2][-]{subsection.4.8}{Advantages of k-means clustering}{section.4}
+\BOOKMARK [1][-]{section.5}{K-means ++}{}
+\BOOKMARK [2][-]{subsection.5.1}{K-Means ++ \(careful seeding\)}{section.5}
+\BOOKMARK [2][-]{subsection.5.2}{Working of K-means ++ :}{section.5}

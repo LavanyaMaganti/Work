@@ -1,0 +1,85 @@
+<html>
+<head>
+<script>
+
+var x1, y1, x2, y2,r,xc,yc;
+var state = false;
+var elem, gc;
+
+function setup()
+{
+  elem = document.getElementById("canvas");
+  gc = elem.getContext("2d");
+  gc.fillStyle = "black";
+  gc.fillRect(0,0,elem.width,elem.height);
+}
+
+function putpixel(x,y,xc,yc)
+{
+gc.strokeStyle = "white";
+     gc.strokeRect(xc+x,yc+y,1,1); 
+    gc.strokeRect(xc+y,yc+x,1,1); 
+    gc.strokeRect(xc-y,yc+x,1,1); 
+    gc.strokeRect(xc-x,yc+y,1,1); 
+    gc.strokeRect(xc-x,yc-y,1,1); 
+     gc.strokeRect(xc-y,yc-x,1,1); 
+     gc.strokeRect(xc+y,yc-x,1,1); 
+   gc.strokeRect(xc+x,yc-y,1,1); 
+ 
+}
+
+
+function drawcircle(xc, yc, x1, y1)
+{
+var h=0;
+var r,ystop;
+cal = (((x1-xc)*(x1-xc))+((y1-yc)*(y1-yc)));
+ r = Math.sqrt(cal);
+ystop = r*Math.sqrt(1.0/2.0);
+var x=r,y=0; 
+  while(y <= ystop){
+  putpixel(x,y,xc,yc);
+  if (h < 0)
+	h += 2 * y + 1;
+  else
+	{
+	  h += 2 * (y - x) +1;
+    --x;
+	}
+y++;
+  }
+
+}
+
+
+
+
+function addpoint(ev)
+{
+  var xoff,yoff;
+
+  xoff = elem.offsetLeft;
+  yoff = elem.offsetTop;
+  if(!state){
+    x1 = ev.clientX - xoff;
+    y1 = ev.clientY - yoff;
+	putpixel(0,0,x1,y1);
+    state = !state;
+  } else {
+    x2 = ev.clientX - xoff;
+    y2 = ev.clientY - yoff;
+   drawcircle(x1,y1,x2,y2);
+ state = !state;
+  }
+}
+
+</script>
+</head>
+<body onload="setup()">
+<center>
+<canvas onclick="addpoint(event)" id="canvas" width="800" height="600">
+Old browser.
+</canvas>
+</center>
+</body>
+</html>

@@ -1,0 +1,75 @@
+03-07-2017:
+
+Bases continued:
+===============
+
+Base 16 (Hexadecimal):
+  x = 16
+  0 <= a_i <= 15
+  We use a-f/A-F to represent the numbers 10-15
+  
+  FC65 = 15*16^3 + 12*16^2 + 6*16 + 5
+         61140   + 3072    + 96   + 5  = 64613
+
+  Powers of 16:
+  16^0	1	16^3	4096
+  16^1	16	16^4	65536
+  16^2	256	16^5	1048576
+
+  - A hex number represents a 4 digit binary number.
+  - Often prefixed with a leading 0x to indicate hexadecimal.
+
+- Convert base 8/16 to binary.
+
+Functions
+---------
+- Functions are an abstraction.  A sequence of code that is given a name, you
+  may think of them as mini or sub-programs.
+
+- Functions in JavaScript are defined with the function keyword. Given:
+
+  function foo(a, b) {
+    return a+b;
+  }
+
+  - "foo" is the name of the function.
+  - a and b here are "arguments" or "parameters" to the function.  They are
+    variables that hold the values that are passed to the function in the same
+    order.  A function may have zero or more arguments separated by commas and
+    enclosed in ()'s.
+
+  - The { ... } enclose the "statements" of the function, this is the function
+    body.
+
+  - The statement "return a+b;" tells the computer to return the result of a+b
+    as this functions "value".  A return with no expression returns no value.
+
+  - This function then would be used like so:
+
+    var v = foo(1, 2);
+
+  - v will be assigned the "return" value of foo, which is the result of adding
+    1 (stored in a) and 2 (stored in b) together.
+
+examples:
+========
+function ma(a, b, c) { return a*b + c; }
+var v = ma(1,2,3) + ma(3,4,5);
+    v = 5         + 17;
+    v = 22
+
+---
+function hello() {
+  console.log("Hello, world!");
+  console.log("Hello, world!");
+  console.log("Hello, world!");
+}
+
+- This function just prints "Hello, world!" to the console log 3 times and
+  does nothing else.  It does not even return a value.  This kind of function
+  is often called a "procedure", it's used to abstract code into simpler to
+  understand bite-sized chunks or to eliminate code repetition.  It would be
+  used like so:
+
+// Prints out "Hello, world!" 9 times:
+hello(); hello(); hello();

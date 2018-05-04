@@ -1,0 +1,86 @@
+01-24-2017:
+
+Review commands:
+  man, cd, ls, cp, mv, rm, mkdir, chmod, more/less
+  ., .., /, ~, ~user, *, ?
+
+
+Definitions:
+-----------
+URL - Uniform Resource Locator
+  - Defines the protocol and location of a network resource, like a web-page.
+
+  <scheme name|protocol>://<host (domain name)>[:<port>][/<resource-path>]
+  e.g: http://cs.indstate.edu/~sbaker/
+       https://cs.indstate.edu
+       ftp://mama.indstate.edu/linux/
+
+HTTP - HyperText Transfer Protocol
+  - The protocol used by a web-server to communicate with your web-browser.
+
+HTML - Hyper-Text Markup Language:
+  standard: http://www.w3.org/TR/html5/
+
+
+A basic HTML document:
+=====================
+--- index.html ---
+<!-- This is a HTML comment. -->
+<!--
+  This DOCTYPE defines this as a HTML 5 document:
+-->
+
+<!DOCTYPE html>
+
+<!-- The HTML section. This encompasses the entire document: --> 
+<html>
+
+ <!-- The head section (document meta-data) -->
+ <head>
+   <!-- Defines the character set as "utf-8": -->
+   <meta charset='utf-8'>
+   <!-- Sets the windows title -->
+   <title> Hello, world! </title>
+ <!-- The heads closing tag. -->
+ </head>
+
+ <!-- The "body" section or the visible document. -->
+ <body>
+  <!-- Defines a heading with "Hello, world!" as the text -->
+  <h1> Hello, world! </h1>
+ </body>
+
+</html>
+-------------------
+
+Elements:
+========
+
+Start tags:
+  1) '<' immediately followed by the tag name.
+  2) zero or more optional attributes proceeded/separated by spaces.
+  3) An optional '/' on void or foreign elements describing the tag as
+     self-closing.
+  4) a final '>' character.
+  
+End tags:
+  "</" <tag-name> [0+ spaces] ">"
+
+- Void elements are elements that have no closing tag, so have no text
+  associated with them:
+    area, base, br, col, embed, hr, img, input, keygen, link, meta, param,
+    source, track, wbr
+  - They may be "self closed" by putting a / before the ending >, i.e.:
+    <hr/>, <img src='x.jpg' />.  This is required for XHTML validation.
+
+
+HTML Element Attributes:
+-----------------------
+ - Empty attribute syntax: just the attribute name.
+ - Unquoted syntax:
+   - <attribute name> "=" <value>
+   - value not containing any literal spaces, or ', ", <, >, `.
+ - Single/Double quoted syntax:
+   - <attribute name> "=" '/" <0+ characters> '/"
+ - should never be two or more attributes with the same case-insensitve name
+   present on the same tag.
